@@ -139,6 +139,14 @@ Certbot deja la renovación automática programada.
 bash /var/www/gesetec/deploy/actualizar.sh
 ```
 
+Para que se publique solo cada vez que se sube algo a GitHub, en el VPS (con el usuario dueño de `/var/www/gesetec`) se agrega a `crontab -e`:
+
+```
+*/5 * * * * bash /var/www/gesetec/deploy/auto-actualizar.sh >> $HOME/gesetec-deploy.log 2>&1
+```
+
+Cada 5 minutos revisa `main`; si hay commits nuevos, actualiza y regenera `out/`. Si no hay nada nuevo, no hace nada.
+
 ### Qué hace la configuración de Nginx
 
 - `http://` y `www` → `https://gesetecalderas.com` (301).
