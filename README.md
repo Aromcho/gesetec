@@ -156,5 +156,4 @@ assets/fotos/        fotos originales de trabajos (entrada del script de imágen
 public/              logos, íconos, Open Graph; public/img/ se genera solo (no se versiona)
 scripts/             optimize-images.mjs
 deploy/              Nginx, redirecciones, encabezados y script de actualización
-reel/                video de lanzamiento para Instagram
 ```
