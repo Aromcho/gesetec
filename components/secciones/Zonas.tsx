@@ -1,57 +1,71 @@
-import { negocio } from "@/content/negocio";
+import Link from "next/link";
+import { gruposZona, zonas, zonasEnTexto } from "@/content/zonas";
 import { Encabezado } from "../Encabezado";
 import { Llama } from "../Llama";
 import { Aparecer } from "../Aparecer";
 import { Foto } from "../Foto";
+import { Icono } from "../Icono";
 
-// De norte a sur sobre la costa.
-const RECORRIDO = ["costa-esmeralda", "pinamar", "carilo", "villa-gesell"];
-
-/** Zonas de atención sobre una "ruta" de la costa, de norte a sur. */
+/** Zonas de atención agrupadas, cada una con enlace a su página (SEO local por localidad y barrio). */
 export function Zonas() {
-  const zonas = RECORRIDO.map((s) => negocio.zonas.find((z) => z.slug === s)!).filter(Boolean);
   return (
     <section id="zonas" aria-labelledby="zonas-titulo" className="relative isolate">
       <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
-        <Foto nombre="casa-de-veraneo-entre-pinos-costa-atlantica" alt="" sizes="100vw" className="opacity-25 [mask-image:linear-gradient(180deg,transparent,#000_30%,#000_70%,transparent)]" />
+        <Foto
+          nombre="casa-de-veraneo-entre-pinos-costa-atlantica"
+          alt=""
+          sizes="100vw"
+          className="opacity-25 [mask-image:linear-gradient(180deg,transparent,#000_30%,#000_70%,transparent)]"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-noche via-noche/80 to-noche/40" />
       </div>
       <div className="mx-auto max-w-6xl px-5 py-10 md:px-6">
-      <Encabezado
-        etiqueta="Zonas de atención"
-        id="zonas-titulo"
-        titulo={
-          <>
-            De Costa Esmeralda <span className="text-humo">a</span> Villa Gesell
-          </>
-        }
-        bajada={`Calderas y calefacción en ${negocio.zonas.map((z) => z.nombre).join(", ")}. También llegamos a ${negocio.zonasExtra.join(", ")}.`}
-      />
-      <ol className="relative mt-10 grid gap-0 md:grid-cols-4 md:gap-5">
-        {/* Línea de la costa */}
-        <span
-          aria-hidden="true"
-          className="absolute bottom-6 left-[11px] top-6 w-px bg-gradient-to-b from-azul via-celeste/40 to-rojo md:bottom-auto md:left-6 md:right-6 md:top-[11px] md:h-px md:w-auto md:bg-gradient-to-r"
+        <Encabezado
+          etiqueta="Zonas de atención"
+          id="zonas-titulo"
+          titulo={
+            <>
+              De Villa Gesell <span className="text-humo">a toda la costa</span>
+            </>
+          }
+          bajada={`Service, reparación e instalación de calderas y climatización de piscinas en ${zonasEnTexto()}.`}
         />
-        {zonas.map((z, i) => {
-          const base = z.slug === "villa-gesell";
-          return (
-            <Aparecer key={z.slug} como="li" retraso={i * 0.08} className="relative pb-8 pl-10 md:pb-0 md:pl-0 md:pt-10">
-              <span
-                aria-hidden="true"
-                className={`absolute left-0 top-1 grid h-6 w-6 place-items-center rounded-full border md:top-0 ${
-                  base ? "border-rojo bg-noche" : "border-celeste/50 bg-noche"
-                }`}
-              >
-                {base ? <Llama className="h-4 w-auto" circulo={false} modo="viva" /> : <span className="h-2 w-2 rounded-full bg-celeste" />}
-              </span>
-              <h3 className="titular-medio text-[1.6rem] md:text-2xl">{z.nombre}</h3>
-              {base && <p className="etiqueta mt-1 text-[#ff7a70]">Nuestra base</p>}
-              <p className="mt-2 text-[0.95rem] leading-relaxed text-celeste">{z.texto}</p>
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {gruposZona.map((g, i) => (
+            <Aparecer key={g} className="h-full" retraso={i * 0.06}>
+              <div className="h-full rounded-3xl border border-linea bg-noche/60 p-5 backdrop-blur-sm">
+                <h3 className="etiqueta text-humo">{g}</h3>
+                <ul className="mt-4 space-y-1">
+                  {zonas
+                    .filter((z) => z.grupo === g)
+                    .map((z) => {
+                      const base = z.slug === "villa-gesell";
+                      return (
+                        <li key={z.slug}>
+                          <Link
+                            href={`/zonas/${z.pagina}`}
+                            className="group -mx-2 flex items-center gap-3 rounded-xl px-2 py-2 transition hover:bg-white/5"
+                          >
+                            <span
+                              aria-hidden="true"
+                              className={`grid h-6 w-6 shrink-0 place-items-center rounded-full border ${base ? "border-rojo" : "border-celeste/40"}`}
+                            >
+                              {base ? <Llama className="h-4 w-auto" circulo={false} modo="viva" /> : <span className="h-1.5 w-1.5 rounded-full bg-celeste" />}
+                            </span>
+                            <span className="min-w-0 flex-1">
+                              <span className="block font-semibold leading-tight [font-stretch:110%]">{z.nombre}</span>
+                              <span className="block text-xs text-humo">{base ? "Nuestra base" : z.tipo === "barrio privado" ? "Barrio privado" : "Localidad"}</span>
+                            </span>
+                            <Icono nombre="flecha" className="h-4 w-4 shrink-0 text-humo transition group-hover:translate-x-0.5 group-hover:text-white" />
+                          </Link>
+                        </li>
+                      );
+                    })}
+                </ul>
+              </div>
             </Aparecer>
-          );
-        })}
-      </ol>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -11,7 +11,7 @@ interface Props {
   h1: string;
   bajada: string;
   /** Preselección para "Pedí tu service". */
-  pedido?: { marca?: string; servicio?: string };
+  pedido?: { marca?: string; servicio?: string; zona?: string };
   mensajeWhatsApp?: string;
   /** Contenido a la derecha (logo de marca, foto…). */
   aparte?: React.ReactNode;
@@ -51,7 +51,7 @@ export function CabeceraPagina({ migas, etiqueta, h1, bajada, pedido, mensajeWha
             </h1>
             <p className="mt-5 max-w-2xl text-[1.08rem] leading-relaxed text-celeste md:text-lg">{bajada}</p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <BotonPedido marca={pedido?.marca} servicio={pedido?.servicio} className="w-full sm:w-auto" />
+              <BotonPedido marca={pedido?.marca} servicio={pedido?.servicio} zona={pedido?.zona} className="w-full sm:w-auto" />
               <a
                 href={linkWhatsApp(mensajeWhatsApp)}
                 target="_blank"

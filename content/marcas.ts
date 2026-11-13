@@ -204,7 +204,7 @@ export const marcas: Marca[] = [
     nombre: "Rowa",
     logo: { src: "/marcas/rowa-blanco.svg", ancho: 159, alto: 62 },
     rol: "Servicio técnico de bombas presurizadoras",
-    seoTitulo: "Bombas Rowa en Villa Gesell: service y presurización | Gesetec",
+    seoTitulo: "Bombas Rowa en Villa Gesell: service y presurización",
     seoDescripcion:
       "Servicio técnico oficial de bombas Rowa en Villa Gesell y la costa. Bombas presurizadoras: instalación, reparación y mantenimiento.",
     h1: "Bombas Rowa: servicio técnico y presurización en Villa Gesell",

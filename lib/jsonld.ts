@@ -14,13 +14,16 @@ import { srcMayor } from "./imagenes";
 
 export const ID_NEGOCIO = `${negocio.url}/#negocio`;
 
-const areaServed = [
-  ...negocio.zonas.map((z) => ({
-    "@type": "City",
-    name: z.nombre,
-    containedInPlace: { "@type": "State", name: "Buenos Aires" },
-  })),
-];
+const areaServed = negocio.zonas.map((z) =>
+  z.tipo === "localidad"
+    ? { "@type": "City", name: z.nombre, containedInPlace: { "@type": "State", name: "Provincia de Buenos Aires" } }
+    : { "@type": "Place", name: `${z.nombre} (barrio privado)`, containedInPlace: { "@type": "State", name: "Provincia de Buenos Aires" } },
+);
+
+/** Una zona puntual (para las páginas /zonas). */
+export function areaZona(nombres: string[]) {
+  return areaServed.filter((a) => nombres.some((n) => a.name.startsWith(n)));
+}
 
 export function negocioSchema() {
   return {
@@ -62,7 +65,7 @@ export function negocioSchema() {
   };
 }
 
-export function servicioSchema(s: Pick<Servicio, "nombre" | "seoDescripcion"> & { ruta: string; tipo?: string }) {
+export function servicioSchema(s: Pick<Servicio, "nombre" | "seoDescripcion"> & { ruta: string; tipo?: string; zonas?: string[] }) {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -71,7 +74,7 @@ export function servicioSchema(s: Pick<Servicio, "nombre" | "seoDescripcion"> & 
     description: s.seoDescripcion,
     url: urlAbsoluta(s.ruta),
     provider: { "@id": ID_NEGOCIO },
-    areaServed,
+    areaServed: s.zonas ? areaZona(s.zonas) : areaServed,
   };
 }
 

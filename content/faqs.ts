@@ -17,7 +17,7 @@ export const faqs: Faq[] = [
     id: "service-oficial-peisa",
     pregunta: "¿Gesetec es service oficial PEISA?",
     respuesta:
-      "Sí. Somos servicio técnico oficial PEISA en Villa Gesell, Cariló, Pinamar y Costa Esmeralda. Reparamos y mantenemos calderas PEISA con repuestos originales, y también vendemos e instalamos equipos PEISA nuevos.",
+      "Sí. Somos servicio técnico oficial PEISA en Villa Gesell y toda la zona: Mar de las Pampas, Mar Azul, Cariló, Valeria del Mar, Pinamar, Costa Esmeralda y Madariaga. Reparamos y mantenemos calderas PEISA con repuestos originales, y también vendemos e instalamos equipos PEISA nuevos.",
     portada: true,
     peisa: true,
   },
@@ -32,7 +32,7 @@ export const faqs: Faq[] = [
     id: "zonas",
     pregunta: "¿En qué zonas atienden?",
     respuesta:
-      "Atendemos en Villa Gesell, Cariló, Pinamar y Costa Esmeralda, y llegamos a toda la costa atlántica de la zona. Para venta de equipos hacemos envíos a todo el país.",
+      "Atendemos en Villa Gesell, Mar de las Pampas, Las Gaviotas, Mar Azul, Cariló, Valeria del Mar, Pinamar y General Madariaga, y en los barrios privados Costa Esmeralda, North Beach, La Herradura y Villa Robles. Para venta de equipos hacemos envíos a todo el país.",
     portada: true,
   },
   {

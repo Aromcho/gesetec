@@ -10,6 +10,7 @@ export const navegacion = [
   { href: "/service-oficial-peisa", texto: "Service PEISA" },
   { href: "/#servicios", texto: "Servicios" },
   { href: "/#trabajos", texto: "Trabajos" },
+  { href: "/#zonas", texto: "Zonas" },
   { href: "/#resenas", texto: "Reseñas" },
   { href: "/#contacto", texto: "Contacto" },
 ] as const;

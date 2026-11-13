@@ -81,7 +81,7 @@ export const servicios: Servicio[] = [
     icono: "reparacion",
     seoTitulo: "Reparación de calderas en Villa Gesell | Técnico oficial",
     seoDescripcion:
-      "Técnico de calderas en Villa Gesell: diagnóstico y reparación en el día con repuestos originales. PEISA, Baxi, Ferroli, Euterma. Pedí tu service por WhatsApp.",
+      "Técnico de calderas en Villa Gesell y la zona: diagnóstico y reparación en el día con repuestos originales. PEISA, Baxi, Ferroli, Euterma y más.",
     h1: "Reparación de calderas en Villa Gesell",
     bajada: "Diagnóstico y reparación en el día, con repuestos originales y técnicos oficiales.",
     parrafos: [
@@ -238,11 +238,11 @@ export const servicios: Servicio[] = [
     icono: "temporada",
     seoTitulo: "Puesta en marcha de calderas: casas de temporada | Gesetec",
     seoDescripcion:
-      "Puesta en marcha de calderas en casas de veraneo de Villa Gesell, Cariló, Pinamar y Costa Esmeralda. Revisión tras meses cerrada, salitre y humedad.",
+      "Puesta en marcha de calderas en casas de veraneo de Villa Gesell, Mar de las Pampas, Mar Azul, Cariló, Pinamar y Costa Esmeralda. Salitre y humedad.",
     h1: "Puesta en marcha de calderas en casas de temporada",
     bajada: "Tu casa de la costa estuvo cerrada meses. Antes de prender la calefacción, dejala en manos de un técnico.",
     parrafos: [
-      "Muchas casas de Villa Gesell, Cariló, Pinamar y Costa Esmeralda pasan buena parte del año cerradas. En ese tiempo la caldera no trabaja, el circuito puede perder presión y el aire salino y la humedad atacan las partes metálicas y eléctricas. Encenderla sin revisar puede terminar en una falla justo cuando llegás.",
+      "Muchas casas de Villa Gesell, Mar de las Pampas, Mar Azul, Cariló, Valeria del Mar, Pinamar y los barrios privados como Costa Esmeralda pasan buena parte del año cerradas. En ese tiempo la caldera no trabaja, el circuito puede perder presión y el aire salino y la humedad atacan las partes metálicas y eléctricas. Encenderla sin revisar puede terminar en una falla justo cuando llegás.",
       "La puesta en marcha de temporada es una visita para revisar el equipo, cargar y purgar el circuito, controlar las seguridades y dejar la calefacción y el agua caliente funcionando. Si sos propietario y no estás en la costa, coordinamos todo por WhatsApp.",
     ],
     incluye: [
@@ -273,7 +273,7 @@ export const servicios: Servicio[] = [
     nombre: "Calefacción central",
     resumen: "Radiadores, toalleros y losa radiante: proyectos completos para casas, hoteles y comercios.",
     icono: "radiador",
-    seoTitulo: "Calefacción central en Villa Gesell: radiadores y losa radiante",
+    seoTitulo: "Calefacción central y losa radiante en Villa Gesell",
     seoDescripcion:
       "Calefacción central por radiadores, toalleros y piso radiante en Villa Gesell, Cariló y Pinamar. Proyectos integrales con calderas PEISA. Pedí presupuesto.",
     h1: "Calefacción central por radiadores y losa radiante",

@@ -88,7 +88,15 @@ export function Pie() {
             ))}
           </ul>
           <p className="etiqueta mt-8 text-humo">Zonas</p>
-          <p className="mt-3 text-sm leading-relaxed text-celeste">{negocio.zonas.map((z) => z.nombre).join(" · ")}</p>
+          <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-1.5 text-sm">
+            {negocio.zonas.map((z) => (
+              <li key={z.slug}>
+                <Link href={`/zonas/${z.pagina}`} className="text-celeste hover:text-white">
+                  {z.nombre}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </nav>
       </div>
       <div className="relative mx-auto mt-14 flex max-w-6xl flex-col gap-2 border-t border-linea px-5 pt-6 text-xs text-humo md:flex-row md:justify-between md:px-6">

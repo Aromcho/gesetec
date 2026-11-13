@@ -1,3 +1,5 @@
+import { zonas } from "./zonas";
+
 /**
  * DATOS DEL NEGOCIO — fuente única de nombre, dirección, teléfono, horarios y zonas.
  *
@@ -22,7 +24,7 @@ export const negocio = {
   nombreCorto: "Gesetec",
   lema: "Climatización eficiente",
   descripcion:
-    "Venta, instalación y service oficial de calderas en Villa Gesell, Cariló, Pinamar y Costa Esmeralda. Service oficial PEISA, Baxi, Tameco, Ferroli, Euterma, Rinnai, Bowman y bombas Rowa.",
+    "Venta, instalación y service oficial de calderas y climatización de piscinas en Villa Gesell, Mar de las Pampas, Mar Azul, Cariló, Valeria del Mar, Pinamar, Costa Esmeralda y General Madariaga. Service oficial PEISA, Baxi, Tameco, Ferroli, Euterma, Rinnai, Bowman y bombas Rowa.",
 
   /** Dominio de producción, sin barra final. Se usa en canonical, sitemap y JSON-LD. */
   url: "https://gesetecalderas.com",
@@ -83,35 +85,8 @@ export const negocio = {
     domingo: [],
   } satisfies Record<Dia, Franja[]>,
 
-  /** Zonas de atención (bio de Instagram). El orden es el que se muestra. */
-  zonas: [
-    {
-      slug: "villa-gesell",
-      nombre: "Villa Gesell",
-      texto:
-        "Desde acá salimos todos los días. Atendemos casas, departamentos, hoteles y comercios de toda la ciudad, del centro a los barrios del norte y del sur.",
-    },
-    {
-      slug: "carilo",
-      nombre: "Cariló",
-      texto:
-        "Casas entre pinos y apart hoteles: instalamos el sistema de calefacción completo de un apart hotel de 10 departamentos con dos calderas PEISA.",
-    },
-    {
-      slug: "pinamar",
-      nombre: "Pinamar",
-      texto:
-        "Service, reparación e instalación de calderas y climatización de piscinas en Pinamar, Valeria del Mar y alrededores.",
-    },
-    {
-      slug: "costa-esmeralda",
-      nombre: "Costa Esmeralda",
-      texto:
-        "Puesta en marcha de calderas de casas de temporada y climatizadores de piscina TAMECO instalados en el día.",
-    },
-  ],
-  /** Otras localidades que el negocio nombra en sus publicaciones ("trabajamos en toda la Costa"). */
-  zonasExtra: ["Mar de las Pampas", "Valeria del Mar", "Villa Robles", "North Beach"],
+  /** Zonas de atención: se editan en content/zonas.ts. */
+  zonas,
 } as const;
 
 export type Negocio = typeof negocio;

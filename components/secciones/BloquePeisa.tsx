@@ -37,7 +37,7 @@ export function BloquePeisa() {
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/85">
               Es la marca con la que más trabajamos. Reparamos, mantenemos e instalamos calderas, radiadores, toalleros y termostatos PEISA
-              en Villa Gesell, Cariló, Pinamar y Costa Esmeralda.
+              en Villa Gesell y toda la zona: de Costa Esmeralda a Mar Azul, y hasta Madariaga.
             </p>
           </div>
           <ul className="grid gap-3 sm:grid-cols-2">

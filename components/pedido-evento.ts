@@ -4,6 +4,7 @@ export const EVENTO_PEDIDO = "gesetec:pedido";
 export interface DetallePedido {
   marca?: string;
   servicio?: string;
+  zona?: string;
 }
 
 export function abrirPedido(detalle: DetallePedido = {}) {

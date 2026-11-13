@@ -24,7 +24,8 @@ const archivo = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(negocio.url),
   title: { default: `${negocio.nombre} | Service oficial PEISA en Villa Gesell`, template: `%s | ${negocio.nombre}` },
-  description: negocio.descripcion,
+  description:
+    "Venta, instalación y service oficial de calderas y piscinas en Villa Gesell y toda la zona: Mar de las Pampas, Mar Azul, Cariló, Pinamar y Madariaga.",
   applicationName: negocio.nombre,
   formatDetection: { telephone: false, email: false, address: false },
   icons: {

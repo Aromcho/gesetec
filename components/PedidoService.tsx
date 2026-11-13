@@ -34,6 +34,7 @@ const SERVICIOS = [
   "Bomba presurizadora",
 ];
 const ZONAS = [...negocio.zonas.map((z) => z.nombre), "Otra zona"];
+// Las zonas salen de content/zonas.ts (localidades y barrios privados).
 const PASOS = ["Equipo", "Qué necesitás", "Tus datos"];
 
 export function PedidoService({ inicial }: { inicial?: DetallePedido }) {
@@ -57,6 +58,7 @@ export function PedidoService({ inicial }: { inicial?: DetallePedido }) {
     const abrirCon = (d: DetallePedido) => {
       if (d.marca) setMarca(d.marca);
       if (d.servicio) setServicio(d.servicio);
+      if (d.zona) setZona(d.zona);
       setDir(1);
       setPaso(d.marca ? 1 : 0);
       if (!ref.current?.open) ref.current?.showModal();

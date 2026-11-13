@@ -12,7 +12,7 @@ export const paginaPeisa = {
     "Reparación, mantenimiento y puesta en marcha de calderas PEISA con repuestos originales. Y venta e instalación de equipos nuevos, con garantía oficial.",
 
   intro: [
-    "PEISA es la marca de calefacción con la que más trabajamos y la que más conocemos. Somos servicio técnico oficial PEISA en Villa Gesell, Cariló, Pinamar y Costa Esmeralda: reparamos, mantenemos y ponemos en marcha calderas PEISA, y vendemos e instalamos calderas, radiadores, toalleros, termostatos y calefones de la marca.",
+    "PEISA es la marca de calefacción con la que más trabajamos y la que más conocemos. Somos servicio técnico oficial PEISA en Villa Gesell, Mar de las Pampas, Mar Azul, Cariló, Valeria del Mar, Pinamar, Costa Esmeralda, los barrios privados de la zona y General Madariaga: reparamos, mantenemos y ponemos en marcha calderas PEISA, y vendemos e instalamos calderas, radiadores, toalleros, termostatos y calefones de la marca.",
     "Ser service oficial significa que trabajamos con repuestos originales y con el respaldo de la marca. Para vos, significa que tu caldera queda en manos de técnicos que la conocen por dentro y que la reparación cuida la seguridad y la garantía del equipo.",
   ],
 

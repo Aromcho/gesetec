@@ -27,8 +27,9 @@ export function Portada() {
             Venta y service oficial de calderas en <span className="degrade-llama">Villa Gesell</span>
           </h1>
           <p className="mt-5 max-w-xl text-[1.08rem] leading-relaxed text-celeste md:text-lg">
-            Reparación, mantenimiento e instalación de calderas, calefacción central y climatización de piscinas en Villa Gesell, Cariló,
-            Pinamar y Costa Esmeralda. Técnicos oficiales y repuestos originales.
+            Reparación, mantenimiento e instalación de calderas, calefacción central y climatización de piscinas en Villa Gesell, Mar de las
+            Pampas, Mar Azul, Cariló, Valeria del Mar, Pinamar, Costa Esmeralda, los barrios privados de la zona y Madariaga. Técnicos oficiales y
+            repuestos originales.
           </p>
 
           {/* Sello Service Oficial PEISA */}
