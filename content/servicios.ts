@@ -1,6 +1,7 @@
 /**
  * SERVICIOS — tarjetas de la portada y páginas /servicios/[slug].
  * Fuente: publicaciones de Instagram y web anterior de Gesetec. Textos originales.
+ * El orden del array es el orden en que se muestran (pedido del cliente: piscinas en 4.º lugar).
  */
 
 export interface Servicio {
@@ -21,7 +22,7 @@ export interface Servicio {
   senales: { titulo: string; items: string[] };
   /** Opción preseleccionada en "Pedí tu service" (paso 2). */
   pedido: string;
-  /** Fotos reales (nombres en assets/fotos, sin extensión). */
+  /** Fotos (nombres en assets/fotos o assets/fondos, sin extensión). La primera va en la cabecera de la página. */
   fotos: string[];
   marcas: string[];
   trabajos: string[];
@@ -149,10 +150,52 @@ export const servicios: Servicio[] = [
       ],
     },
     pedido: "Service / mantenimiento anual",
-    fotos: ["service-oficial-caldera-peisa-abierta", "radiador-peisa-gamma-500-blanco"],
+    fotos: ["manos-tecnico-revisando-caldera-mantenimiento", "service-oficial-caldera-peisa-abierta", "radiador-peisa-gamma-500-blanco"],
     marcas: ["baxi", "ferroli", "euterma", "tameco"],
     trabajos: [],
     faqs: ["cada-cuanto-service", "pierde-presion", "casas-veraneo", "garantia"],
+  },
+  {
+    slug: "climatizacion-de-piscinas",
+    nombre: "Climatización de piscinas",
+    resumen: "Climatizadores Tameco e intercambiadores Bowman: tu pileta a la temperatura ideal más meses al año.",
+    icono: "piscina",
+    seoTitulo: "Climatización de piscinas en Villa Gesell | Tameco oficial",
+    seoDescripcion:
+      "Climatizadores de piscina Tameco CP-30, CP-70 y CP-100: venta, instalación en el día y service oficial en Villa Gesell, Pinamar, Cariló y Costa Esmeralda.",
+    h1: "Climatización de piscinas en Villa Gesell y la costa",
+    bajada: "Venta, instalación y service oficial de climatizadores Tameco. Tu piscina lista para usar en un solo día.",
+    parrafos: [
+      "Una piscina climatizada se disfruta muchos más meses. En la costa, donde las noches son frescas incluso en verano, la diferencia se nota desde el primer día.",
+      "Somos service oficial Tameco. Vendemos e instalamos los climatizadores CP-30 (30.000 kcal/h), CP-70 (70.000 kcal/h) y CP-100 (100.000 kcal/h), y te ayudamos a elegir según el volumen de tu piscina y el uso que le des. Armamos la base de cemento, hacemos la instalación y la puesta en marcha, en muchos casos en un solo día.",
+      "Para hoteles o casas que ya tienen calefacción central, otra opción es climatizar la piscina con la caldera mediante un intercambiador de calor Bowman. También hacemos proyectos que combinan calefacción y pileta con un solo sistema.",
+    ],
+    incluye: [
+      "Asesoramiento para elegir la potencia",
+      "Venta de equipos Tameco originales",
+      "Logística a domicilio bonificada (según zona)",
+      "Base de cemento e instalación",
+      "Puesta en marcha y service oficial",
+    ],
+    senales: {
+      titulo: "Opciones",
+      items: [
+        "Climatizador Tameco a gas, independiente",
+        "Intercambiador Bowman vinculado a la caldera",
+        "Proyecto integral: calefacción + piscina",
+        "Climatización de spa",
+      ],
+    },
+    pedido: "Climatizar mi piscina",
+    fotos: [
+      "fondo-piscina-climatizada-atardecer-pinos",
+      "piscina-climatizada-costa-esmeralda",
+      "climatizador-piscina-tameco-cp-30-costa-esmeralda",
+      "intercambiador-bowman-fc100-piscina-apart-hotel",
+    ],
+    marcas: ["tameco", "bowman"],
+    trabajos: ["tameco-cp30-costa-esmeralda", "peisa-xp100-bowman-apart-hotel"],
+    faqs: ["piscina-potencia", "piscina-un-dia", "envios"],
   },
   {
     slug: "presurizacion",
@@ -183,7 +226,7 @@ export const servicios: Servicio[] = [
       ],
     },
     pedido: "Bomba presurizadora",
-    fotos: [],
+    fotos: ["bomba-presurizadora-sala-de-maquinas"],
     marcas: ["rowa"],
     trabajos: [],
     faqs: ["presurizadora", "pierde-presion"],
@@ -220,51 +263,10 @@ export const servicios: Servicio[] = [
       ],
     },
     pedido: "Puesta en marcha de temporada",
-    fotos: ["obra-piso-radiante-entre-pinos", "piscina-climatizada-costa-esmeralda"],
+    fotos: ["casa-de-veraneo-entre-pinos-costa-atlantica", "piscina-climatizada-costa-esmeralda", "obra-piso-radiante-entre-pinos"],
     marcas: ["baxi", "ferroli", "euterma", "tameco"],
     trabajos: [],
     faqs: ["casas-veraneo", "cada-cuanto-service", "zonas"],
-  },
-  {
-    slug: "climatizacion-de-piscinas",
-    nombre: "Climatización de piscinas",
-    resumen: "Climatizadores Tameco e intercambiadores Bowman: tu pileta a la temperatura ideal más meses al año.",
-    icono: "piscina",
-    seoTitulo: "Climatización de piscinas en Villa Gesell | Tameco oficial",
-    seoDescripcion:
-      "Climatizadores de piscina Tameco CP-30, CP-70 y CP-100: venta, instalación en el día y service oficial en Villa Gesell, Pinamar, Cariló y Costa Esmeralda.",
-    h1: "Climatización de piscinas en Villa Gesell y la costa",
-    bajada: "Venta, instalación y service oficial de climatizadores Tameco. Tu piscina lista para usar en un solo día.",
-    parrafos: [
-      "Una piscina climatizada se disfruta muchos más meses. En la costa, donde las noches son frescas incluso en verano, la diferencia se nota desde el primer día.",
-      "Somos service oficial Tameco. Vendemos e instalamos los climatizadores CP-30 (30.000 kcal/h), CP-70 (70.000 kcal/h) y CP-100 (100.000 kcal/h), y te ayudamos a elegir según el volumen de tu piscina y el uso que le des. Armamos la base de cemento, hacemos la instalación y la puesta en marcha, en muchos casos en un solo día.",
-      "Para hoteles o casas que ya tienen calefacción central, otra opción es climatizar la piscina con la caldera mediante un intercambiador de calor Bowman. También hacemos proyectos que combinan calefacción y pileta con un solo sistema.",
-    ],
-    incluye: [
-      "Asesoramiento para elegir la potencia",
-      "Venta de equipos Tameco originales",
-      "Logística a domicilio bonificada (según zona)",
-      "Base de cemento e instalación",
-      "Puesta en marcha y service oficial",
-    ],
-    senales: {
-      titulo: "Opciones",
-      items: [
-        "Climatizador Tameco a gas, independiente",
-        "Intercambiador Bowman vinculado a la caldera",
-        "Proyecto integral: calefacción + piscina",
-        "Climatización de spa",
-      ],
-    },
-    pedido: "Climatizar mi piscina",
-    fotos: [
-      "piscina-climatizada-costa-esmeralda",
-      "climatizador-piscina-tameco-cp-30-costa-esmeralda",
-      "intercambiador-bowman-fc100-piscina-apart-hotel",
-    ],
-    marcas: ["tameco", "bowman"],
-    trabajos: ["tameco-cp30-costa-esmeralda", "peisa-xp100-bowman-apart-hotel"],
-    faqs: ["piscina-potencia", "piscina-un-dia", "envios"],
   },
   {
     slug: "calefaccion-central",
@@ -300,6 +302,7 @@ export const servicios: Servicio[] = [
     },
     pedido: "Calefacción central / radiadores",
     fotos: [
+      "living-calido-radiador-calefaccion-central",
       "serpentinas-piso-radiante-instalacion",
       "radiador-peisa-tropical-500-negro-carilo",
       "colector-piso-radiante-peisa-prima-tec",

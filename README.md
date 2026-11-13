@@ -59,6 +59,11 @@ En `content/negocio.ts` → `email` (por ejemplo cuando esté listo `info@gesete
 2. Agregá el trabajo en `content/trabajos.ts` (título, lugar, equipos, descripción y las fotos con su `alt`).
 3. `npm run build`: las fotos se convierten solas a WebP en varios tamaños.
 
+### Imágenes de Kling
+
+- `assets/fotos/`: fotos reales de trabajos (sacadas de los reels). Varias fueron **mejoradas con Kling** (más nitidez, sin cambiar lo que muestran); las originales quedaron en `assets/originales/` como referencia.
+- `assets/fondos/`: imágenes **generadas con Kling** para ambientar (piscina al atardecer, casa de veraneo, living con radiador, bomba presurizadora, manos de un técnico). Son decorativas: no se usan como "trabajos reales".
+
 ### Sumar reseñas
 
 Copiá la reseña de Google **tal cual** (texto, nombre y fecha) en `content/resenas.ts`. Actualizá `resenasGoogle` en `negocio.ts` con el nuevo total.
@@ -152,7 +157,9 @@ app/                 páginas (/, /service-oficial-peisa, /servicios/[slug], /ma
 components/          componentes (Llama = elemento firma, PedidoService = "Pedí tu service")
 components/secciones secciones de la portada reutilizables
 content/             TODO el contenido editable
-assets/fotos/        fotos originales de trabajos (entrada del script de imágenes)
+assets/fotos/        fotos de trabajos (entrada del script de imágenes)
+assets/fondos/       imágenes de ambientación generadas con Kling
+assets/originales/   fotos originales antes de mejorarlas (no se publican)
 public/              logos, íconos, Open Graph; public/img/ se genera solo (no se versiona)
 scripts/             optimize-images.mjs
 deploy/              Nginx, redirecciones, encabezados y script de actualización

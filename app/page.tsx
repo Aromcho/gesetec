@@ -5,6 +5,7 @@ import { Portada } from "@/components/secciones/Portada";
 import { TiraMarcas } from "@/components/secciones/TiraMarcas";
 import { Servicios } from "@/components/secciones/Servicios";
 import { BloquePeisa } from "@/components/secciones/BloquePeisa";
+import { BloquePiscinas } from "@/components/secciones/BloquePiscinas";
 import { Trabajos } from "@/components/secciones/Trabajos";
 import { Resenas } from "@/components/secciones/Resenas";
 import { Zonas } from "@/components/secciones/Zonas";
@@ -15,7 +16,7 @@ import { Separador } from "@/components/Separador";
 export const metadata = metaPagina({
   titulo: "Calderas en Villa Gesell: venta y service oficial | Gesetec",
   descripcion:
-    "Venta y service oficial de calderas en Villa Gesell, Cariló, Pinamar y Costa Esmeralda. Service oficial PEISA, Baxi, Tameco y más. Pedí tu service por WhatsApp.",
+    "Venta y service oficial de calderas y climatización de piscinas en Villa Gesell, Cariló, Pinamar y Costa Esmeralda. Service oficial PEISA y Tameco.",
   ruta: "/",
 });
 
@@ -31,7 +32,8 @@ export default function Inicio() {
       <div className="mt-24 md:mt-32">
         <BloquePeisa />
       </div>
-      <div className="mt-24 md:mt-32">
+      <BloquePiscinas fondo="fondo-piscina-climatizada-atardecer-pinos" />
+      <div className="mt-16 md:mt-24">
         <Trabajos lista={trabajos} />
       </div>
       <Separador className="my-20 md:my-28" />

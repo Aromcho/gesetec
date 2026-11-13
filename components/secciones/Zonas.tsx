@@ -2,6 +2,7 @@ import { negocio } from "@/content/negocio";
 import { Encabezado } from "../Encabezado";
 import { Llama } from "../Llama";
 import { Aparecer } from "../Aparecer";
+import { Foto } from "../Foto";
 
 // De norte a sur sobre la costa.
 const RECORRIDO = ["costa-esmeralda", "pinamar", "carilo", "villa-gesell"];
@@ -10,7 +11,12 @@ const RECORRIDO = ["costa-esmeralda", "pinamar", "carilo", "villa-gesell"];
 export function Zonas() {
   const zonas = RECORRIDO.map((s) => negocio.zonas.find((z) => z.slug === s)!).filter(Boolean);
   return (
-    <section id="zonas" aria-labelledby="zonas-titulo" className="mx-auto max-w-6xl px-5 md:px-6">
+    <section id="zonas" aria-labelledby="zonas-titulo" className="relative isolate">
+      <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+        <Foto nombre="casa-de-veraneo-entre-pinos-costa-atlantica" alt="" sizes="100vw" className="opacity-25 [mask-image:linear-gradient(180deg,transparent,#000_30%,#000_70%,transparent)]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-noche via-noche/80 to-noche/40" />
+      </div>
+      <div className="mx-auto max-w-6xl px-5 py-10 md:px-6">
       <Encabezado
         etiqueta="Zonas de atención"
         id="zonas-titulo"
@@ -46,6 +52,7 @@ export function Zonas() {
           );
         })}
       </ol>
+      </div>
     </section>
   );
 }
