@@ -17,6 +17,15 @@ interface Props {
   aparte?: React.ReactNode;
 }
 
+/**
+ * Tamaño del H1 que nunca desborda en el celular: se achica si la palabra más larga
+ * no entra en el ancho de la pantalla (Archivo Expanded Black ≈ 0,75 em por letra).
+ */
+function tamanoTitular(texto: string) {
+  const largo = Math.max(...texto.split(/\s+/).map((p) => p.replace(/[^\p{L}]/gu, "").length));
+  return `min(var(--h1-max), calc((100vw - 2.75rem) / ${(largo * 0.75).toFixed(2)}))`;
+}
+
 /** Cabecera de las páginas internas (servicios, marcas, PEISA). */
 export function CabeceraPagina({ migas, etiqueta, h1, bajada, pedido, mensajeWhatsApp, aparte }: Props) {
   return (
@@ -34,7 +43,12 @@ export function CabeceraPagina({ migas, etiqueta, h1, bajada, pedido, mensajeWha
               <span className="inline-block h-px w-6 bg-acento" aria-hidden="true" />
               {etiqueta}
             </p>
-            <h1 className="titular mt-4 text-[2.2rem] xs:text-[2.45rem] sm:text-5xl lg:text-[3.6rem]">{h1}</h1>
+            <h1
+              className="titular mt-4 [--h1-max:2.45rem] sm:[--h1-max:3rem] lg:[--h1-max:3.6rem]"
+              style={{ fontSize: tamanoTitular(h1) }}
+            >
+              {h1}
+            </h1>
             <p className="mt-5 max-w-2xl text-[1.08rem] leading-relaxed text-celeste md:text-lg">{bajada}</p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
               <BotonPedido marca={pedido?.marca} servicio={pedido?.servicio} className="w-full sm:w-auto" />

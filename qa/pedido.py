@@ -1,0 +1,30 @@
+import asyncio, os, urllib.parse
+pass  # si usás otra ruta de navegadores: PLAYWRIGHT_BROWSERS_PATH
+from playwright.async_api import async_playwright
+OUT=os.path.join(os.path.dirname(os.path.abspath(__file__)),'capturas'); os.makedirs(OUT, exist_ok=True)
+async def main():
+    async with async_playwright() as p:
+        b = await p.chromium.launch()
+        ctx = await b.new_context(viewport={'width':390,'height':844}, device_scale_factor=2, is_mobile=True, has_touch=True, locale='es-AR')
+        pg = await ctx.new_page()
+        await pg.goto('http://localhost:3000/', wait_until='networkidle')
+        await pg.locator('main').get_by_role('button', name='Pedí tu service').first.click()
+        dlg = pg.locator('dialog[open]')
+        await dlg.wait_for(); await pg.wait_for_timeout(500)
+        await pg.screenshot(path=f'{OUT}/pedido-1-marca.png')
+        await dlg.get_by_role('button', name='PEISA', exact=True).click(); await pg.wait_for_timeout(450)
+        await dlg.get_by_role('button', name='Muestra un código de error').click()
+        await dlg.get_by_placeholder('Ej.: E01').fill('E10')
+        await pg.screenshot(path=f'{OUT}/pedido-2-servicio.png')
+        await dlg.get_by_role('button', name='Siguiente').click(); await pg.wait_for_timeout(450)
+        await dlg.get_by_role('button', name='Cariló').click()
+        await dlg.get_by_placeholder('Nombre y apellido').fill('Laura Gómez')
+        await dlg.get_by_placeholder('Modelo, barrio').fill('Prima Tec 24, casa cerrada desde marzo')
+        await pg.wait_for_timeout(300)
+        await pg.screenshot(path=f'{OUT}/pedido-3-datos.png')
+        link = dlg.get_by_role('link', name='Enviar por WhatsApp')
+        href = await link.get_attribute('href')
+        print('HREF', href)
+        print('MENSAJE:\n' + urllib.parse.unquote(href.split('text=')[1]))
+        await b.close()
+asyncio.run(main())
