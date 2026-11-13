@@ -53,7 +53,7 @@ export const negocio = {
     whatsapp: "5492255485539",
   },
   /** Mail actual (historia destacada de Instagram). Cuando tengan mail con dominio propio, cambiarlo acá. */
-  email: "geseteccalderas@gmail.com",
+  email: "serviciotecnico@gesetecalderas.com",
 
   instagram: { usuario: "gesetec.calderas", url: "https://www.instagram.com/gesetec.calderas/" },
   /** Ficha de Google Maps (CID de la ficha "GESETEC CALDERAS"). */
