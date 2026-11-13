@@ -1,0 +1,332 @@
+@import "tailwindcss";
+
+/* ───────────────────────── Marca Gesetec ─────────────────────────
+   Azul marino del logo para fondos, rojo para botones, bordó para detalles,
+   azul de la llama como acento y celeste para textos secundarios sobre oscuro. */
+@theme {
+  --color-noche: #040b1d;
+  --color-marino: #0b1a38;
+  --color-marino-2: #12234a;
+  --color-linea: #1c2c52;
+  --color-rojo: #e3322a;
+  --color-rojo-hover: #f04a40;
+  --color-bordo: #9b1c24;
+  --color-azul: #3371d1;
+  --color-celeste: #b9c8f0;
+  --color-humo: #8a9bc4;
+  --color-whatsapp: #25d366;
+
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+
+  --ease-suave: cubic-bezier(0.22, 1, 0.36, 1);
+  --breakpoint-xs: 25rem;
+}
+
+:root {
+  /* 0 = frío (azul) … 1 = calor (rojo). Lo actualiza components/Calor.tsx con el scroll. */
+  --heat: 0;
+  --acento: color-mix(in oklab, var(--color-rojo) calc(var(--heat) * 100%), var(--color-azul));
+  --acento-suave: color-mix(in oklab, var(--acento) 22%, transparent);
+  /* Versión clara del acento para textos chicos (contraste AA sobre azul marino). */
+  --acento-texto: color-mix(in oklab, var(--acento) 66%, #ffffff);
+  color-scheme: dark;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-noche);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-stretch: 100%;
+  font-feature-settings: "ss01";
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+/* Grano fino sobre todo el sitio: le saca lo "plano" a los fondos oscuros (textura PNG de 4 KB). */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("/brand/grano.png");
+  background-size: 96px 96px;
+}
+
+::selection {
+  background: var(--color-rojo);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-celeste);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ───────────── Tipografía ───────────── */
+@utility titular {
+  font-stretch: 125%;
+  font-weight: 860;
+  letter-spacing: -0.012em;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+@utility titular-medio {
+  font-stretch: 118%;
+  font-weight: 800;
+  letter-spacing: -0.008em;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+@utility etiqueta {
+  font-stretch: 80%;
+  font-weight: 650;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+@utility texto-acento {
+  color: var(--acento-texto);
+}
+@utility bg-acento {
+  background-color: var(--acento);
+}
+@utility borde-acento {
+  border-color: var(--acento);
+}
+
+/* Degradé frío → calor para palabras destacadas. */
+@utility degrade-llama {
+  background: linear-gradient(100deg, #6f9df0 0%, var(--color-azul) 30%, var(--color-rojo) 75%, #ff7a4d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.prosa p + p {
+  margin-top: 1rem;
+}
+
+/* ───────────── Llama firma ───────────── */
+.llama-mitad {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+}
+.llama-encender .llama-azul {
+  animation: encender 1.25s var(--ease-suave) 0.15s both, latir-azul 4.2s ease-in-out 1.4s infinite;
+}
+.llama-encender .llama-roja {
+  animation: encender 1.25s var(--ease-suave) 0.4s both, latir-roja 3.6s ease-in-out 1.65s infinite;
+}
+.llama-encender .llama-brillo {
+  animation: brillo-in 1.6s ease-out 0.3s both, respirar 4.2s ease-in-out 1.9s infinite;
+}
+.llama-viva .llama-azul {
+  animation: latir-azul 4.2s ease-in-out infinite;
+}
+.llama-viva .llama-roja {
+  animation: latir-roja 3.6s ease-in-out infinite;
+}
+
+@keyframes encender {
+  0% {
+    transform: scale(0.35, 0.05);
+    opacity: 0;
+    filter: brightness(2.2) blur(3px);
+  }
+  55% {
+    opacity: 1;
+    filter: brightness(1.5) blur(0);
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 1;
+    filter: brightness(1);
+  }
+}
+@keyframes latir-azul {
+  0%,
+  100% {
+    transform: scale(1, 1) skewX(0deg);
+  }
+  50% {
+    transform: scale(1.012, 1.035) skewX(-0.8deg);
+  }
+}
+@keyframes latir-roja {
+  0%,
+  100% {
+    transform: scale(1, 1) skewX(0deg);
+  }
+  45% {
+    transform: scale(1.018, 1.045) skewX(1deg);
+  }
+}
+@keyframes brillo-in {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes respirar {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.72;
+  }
+}
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.sello-girar {
+  animation: girar 48s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+/* Punto "abierto ahora" */
+@keyframes pulso {
+  0% {
+    box-shadow: 0 0 0 0 rgb(37 211 102 / 0.55);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgb(37 211 102 / 0);
+  }
+}
+.pulso {
+  animation: pulso 1.8s ease-out infinite;
+}
+
+/* Carruseles con scroll-snap (mobile) */
+.carrusel {
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+}
+.carrusel::-webkit-scrollbar {
+  display: none;
+}
+.carrusel > * {
+  scroll-snap-align: start;
+}
+
+/* Acordeón de preguntas */
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details[open] .faq-icono {
+  transform: rotate(45deg);
+  color: var(--acento);
+}
+details::details-content {
+  transition: block-size 0.35s var(--ease-suave), content-visibility 0.35s allow-discrete;
+  block-size: 0;
+  overflow: clip;
+}
+details[open]::details-content {
+  block-size: auto;
+}
+@supports (interpolate-size: allow-keywords) {
+  :root {
+    interpolate-size: allow-keywords;
+  }
+}
+
+/* Diálogo "Pedí tu service" */
+dialog.hoja::backdrop {
+  background: rgb(2 6 18 / 0.72);
+  backdrop-filter: blur(6px);
+}
+dialog.hoja[open] {
+  animation: subir 0.42s var(--ease-suave);
+}
+@keyframes subir {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/* ───────────── Movimiento ligado al scroll (CSS puro, sin JavaScript) ─────────────
+   Navegadores con scroll-driven animations: aparición suave y parallax.
+   El resto ve todo estático y visible. */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes parallax-llama {
+  to {
+    transform: translateY(150px) scale(0.88);
+  }
+}
+@keyframes parallax-suave {
+  to {
+    transform: translateY(-60px);
+  }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .aparecer {
+      animation: aparecer linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 45%;
+    }
+    .parallax-llama {
+      animation: parallax-llama linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 720px;
+    }
+    .parallax-suave {
+      animation: parallax-suave linear both;
+      animation-timeline: view();
+    }
+  }
+}
+
+/* Movimiento reducido: todo quieto, todo visible. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .sello-girar,
+  .llama-viva .llama-mitad,
+  .pulso {
+    animation: none !important;
+  }
+}

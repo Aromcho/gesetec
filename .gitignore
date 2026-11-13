@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+.env*.local
+.DS_Store
+# generadas por npm run images (se regeneran en cada build)
+public/img/
+content/generated/images.json
+# capturas de QA
+qa/capturas/
