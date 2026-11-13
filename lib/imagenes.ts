@@ -5,6 +5,8 @@ export interface InfoImagen {
   alto: number;
   anchos: number[];
   blur: string;
+  /** Huella del archivo original: cambia cuando cambia la foto. */
+  v?: string;
 }
 
 const imagenes = datos as Record<string, InfoImagen>;
@@ -15,7 +17,11 @@ export function infoImagen(nombre: string): InfoImagen {
   return info;
 }
 
-export const srcImagen = (nombre: string, ancho: number) => `/img/${nombre}-${ancho}.webp`;
+/** URL de una imagen. Lleva ?v=<huella> para que una foto nueva con el mismo nombre no quede tapada por la caché. */
+export function srcImagen(nombre: string, ancho: number): string {
+  const v = imagenes[nombre]?.v;
+  return `/img/${nombre}-${ancho}.webp${v ? `?v=${v}` : ""}`;
+}
 
 /** La versión más grande disponible (para JSON-LD y Open Graph). */
 export function srcMayor(nombre: string): string {

@@ -11,6 +11,7 @@
 
 import { readdir, mkdir, stat, writeFile, readFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
+import { createHash } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
@@ -48,6 +49,8 @@ for (const carpeta of carpetas) {
     const origen = path.join(dir, archivo);
     const info = await stat(origen);
     const anterior = previo[nombre];
+    // Huella del contenido: va en la URL (?v=) para que, si cambia la foto, el navegador no use la vieja de su caché.
+    const v = createHash("sha1").update(await readFile(origen)).digest("hex").slice(0, 8);
 
     // Ya procesada y sin cambios: reutilizar.
     if (
@@ -55,7 +58,7 @@ for (const carpeta of carpetas) {
       anterior.mtime === info.mtimeMs &&
       anterior.anchos.every((w) => existsSync(path.join(salida, `${nombre}-${w}.webp`)))
     ) {
-      resultado[nombre] = anterior;
+      resultado[nombre] = { ...anterior, v };
       salteadas++;
       continue;
     }
@@ -94,6 +97,7 @@ for (const carpeta of carpetas) {
       anchos: unicos,
       blur: `data:image/webp;base64,${mini.toString("base64")}`,
       mtime: info.mtimeMs,
+      v,
     };
     procesadas++;
   }
