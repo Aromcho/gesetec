@@ -75,7 +75,7 @@ export const marcas: Marca[] = [
     rol: "Service oficial · climatizadores de piscinas y spa",
     seoTitulo: "Tameco en Villa Gesell: climatizadores de piscina | Gesetec",
     seoDescripcion:
-      "Venta, instalación y service oficial de climatizadores de piscina Tameco CP-30, CP-70 y CP-100 en Villa Gesell, Pinamar, Cariló y Costa Esmeralda.",
+      "Venta, instalación y service oficial de climatizadores de piscina Tameco CP-30, CP-70, CP-80 y CP-100 en Villa Gesell, Pinamar, Cariló y Costa Esmeralda.",
     h1: "Climatizadores de piscina Tameco: venta, instalación y service oficial",
     bajada:
       "Somos service oficial Tameco en la costa. Vendemos, instalamos y ponemos en marcha calderas para piscinas y spa.",
@@ -92,9 +92,10 @@ export const marcas: Marca[] = [
       "Service oficial y repuestos originales",
     ],
     equipos: [
-      "Tameco CP-30 · 30.000 kcal/h",
-      "Tameco CP-70 · 70.000 kcal/h (referencia: piscinas de hasta 80.000 litros)",
-      "Tameco CP-100 · 100.000 kcal/h",
+      "Tameco CP-30 · 30.000 kcal/h · piletas de hasta 45.000 litros",
+      "Tameco CP-70 · 70.000 kcal/h · piletas de hasta 100.000 litros",
+      "Tameco CP-80 · 80.000 kcal/h · piletas de hasta 130.000 litros",
+      "Tameco CP-100 · 98.500 kcal/h · piletas de hasta 200.000 litros",
     ],
     serviciosRelacionados: ["climatizacion-de-piscinas", "instalacion", "mantenimiento"],
     trabajos: ["tameco-cp30-costa-esmeralda"],

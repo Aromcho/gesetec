@@ -111,7 +111,7 @@ export const faqs: Faq[] = [
     id: "piscina-potencia",
     pregunta: "¿Qué climatizador necesito para mi piscina?",
     respuesta:
-      "Depende del volumen de agua, de si la piscina está al aire libre o cubierta y de cuántos meses la quieras usar. Como referencia, el Tameco CP-70 (70.000 kcal/h) está pensado para piscinas de hasta unos 80.000 litros, según la instalación y el uso. Pasanos las medidas y te asesoramos.",
+      "Depende del volumen de agua, de si la piscina está al aire libre o cubierta y de cuántos meses la quieras usar. Como referencia, según Tameco: el CP-30 es para piletas de hasta 45.000 litros, el CP-70 hasta 100.000, el CP-80 hasta 130.000 y el CP-100 hasta 200.000. Pasanos las medidas y te asesoramos.",
   },
   {
     id: "piscina-un-dia",

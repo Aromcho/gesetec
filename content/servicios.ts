@@ -276,12 +276,12 @@ export const servicios: Servicio[] = [
     icono: "piscina",
     seoTitulo: "Climatización de piscinas en Villa Gesell | Tameco oficial",
     seoDescripcion:
-      "Climatizadores de piscina Tameco CP-30, CP-70 y CP-100: venta, instalación en el día y service oficial en Villa Gesell, Pinamar, Cariló y Costa Esmeralda.",
+      "Climatizadores de piscina Tameco CP-30 a CP-100: venta, instalación en el día y service oficial en Villa Gesell, Pinamar, Cariló y Costa Esmeralda.",
     h1: "Climatización de piscinas en Villa Gesell y la costa",
     bajada: "Venta, instalación y service oficial de climatizadores Tameco. Tu piscina lista para usar en un solo día.",
     parrafos: [
       "Una piscina climatizada se disfruta muchos más meses. En la costa, donde las noches son frescas incluso en verano, la diferencia se nota desde el primer día.",
-      "Somos service oficial Tameco. Vendemos e instalamos los climatizadores CP-30 (30.000 kcal/h), CP-70 (70.000 kcal/h) y CP-100 (100.000 kcal/h), y te ayudamos a elegir según el volumen de tu piscina y el uso que le des. Armamos la base de cemento, hacemos la instalación y la puesta en marcha, en muchos casos en un solo día.",
+      "Somos service oficial Tameco. Vendemos e instalamos los climatizadores CP-30 (30.000 kcal/h), CP-70 (70.000 kcal/h), CP-80 (80.000 kcal/h) y CP-100 (98.500 kcal/h), y te ayudamos a elegir según el volumen de tu piscina y el uso que le des. Armamos la base de cemento, hacemos la instalación y la puesta en marcha, en muchos casos en un solo día.",
       "Para hoteles o casas que ya tienen calefacción central, otra opción es climatizar la piscina con la caldera mediante un intercambiador de calor Bowman. También hacemos proyectos que combinan calefacción y pileta con un solo sistema.",
     ],
     incluye: [

@@ -52,7 +52,7 @@ export function BloquePiscinas({ fondo = "piscina-climatizada-costa-esmeralda" }
           </ul>
         </div>
 
-        <ul className="mt-12 grid gap-3 sm:grid-cols-3">
+        <ul className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {tameco.map((e, i) => (
             <Aparecer key={e.id} como="li" retraso={i * 0.06}>
               <div className="flex h-full items-center justify-between gap-4 rounded-3xl border border-white/15 bg-noche/55 p-5 backdrop-blur-sm">
