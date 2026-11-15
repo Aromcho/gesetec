@@ -29,8 +29,10 @@ export const metadata: Metadata = {
   applicationName: negocio.nombre,
   formatDetection: { telephone: false, email: false, address: false },
   icons: {
+    // Google pide favicon cuadrado y en múltiplos de 48 px (48, 96, 192…): el SVG tiene viewBox cuadrado.
     icon: [
       { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/brand/icon-192.png", type: "image/png", sizes: "192x192" },
       { url: "/brand/gesetec-llama.svg", type: "image/svg+xml" },
     ],
     apple: "/apple-touch-icon.png",
