@@ -14,9 +14,9 @@ import { Contacto } from "@/components/secciones/Contacto";
 import { Separador } from "@/components/Separador";
 
 export const metadata = metaPagina({
-  titulo: "Calderas en Villa Gesell: venta y service oficial | Gesetec",
+  titulo: "Servicio técnico y venta de calderas en Villa Gesell | Gesetec",
   descripcion:
-    "Service oficial de calderas y piscinas en Villa Gesell, Mar de las Pampas, Mar Azul, Cariló, Valeria del Mar, Pinamar, Costa Esmeralda y Madariaga.",
+    "Servicio técnico, service y venta de calderas en Villa Gesell. Service oficial Peisa en Mar de las Pampas, Cariló, Pinamar, Costa Esmeralda y Madariaga.",
   ruta: "/",
 });
 
@@ -28,7 +28,11 @@ export default function Inicio() {
         <TiraMarcas />
       </div>
       <Separador className="my-20 md:my-28" />
-      <Servicios destacado />
+      <Servicios
+        destacado
+        titulo="Servicio técnico de calderas en Villa Gesell"
+        bajada="Service de calderas, reparación, instalación y venta de calderas: desde el service de una caldera mural hasta proyectos completos de calefacción central y piscinas climatizadas."
+      />
       <div className="mt-24 md:mt-32">
         <BloquePeisa />
       </div>

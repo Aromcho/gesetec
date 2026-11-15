@@ -31,7 +31,7 @@ export function BloquePeisa() {
             <span className="inline-flex items-center rounded-2xl bg-white px-4 py-3 shadow-xl">
               <img src={peisa.logo.src} alt="PEISA" width={peisa.logo.ancho} height={peisa.logo.alto} loading="lazy" className="h-7 w-auto md:h-9" />
             </span>
-            <p className="etiqueta mt-6 text-[#ffb3ad]">Service oficial PEISA en la costa</p>
+            <p className="etiqueta mt-6 text-[#ffb3ad]">Service Peisa en Villa Gesell y la costa</p>
             <h2 id="peisa-titulo" className="titular mt-3 text-[2.3rem] xs:text-[2.6rem] md:text-6xl">
               Tu PEISA, en manos de su service oficial
             </h2>
