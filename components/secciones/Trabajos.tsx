@@ -56,7 +56,7 @@ export function Trabajos({
               <button
                 type="button"
                 data-trabajo={t.id}
-                className="group relative block aspect-[4/5] w-full overflow-hidden rounded-3xl border border-linea bg-marino text-left md:aspect-auto md:h-full md:min-h-[17rem]"
+                className="group relative block aspect-[4/5] w-full overflow-hidden rounded-2xl border border-linea bg-marino text-left md:aspect-auto md:h-full md:min-h-[17rem]"
               >
                 <Foto
                   nombre={t.fotos[0].src}
@@ -64,7 +64,7 @@ export function Trabajos({
                   sizes={i === 0 ? "(min-width: 768px) 60vw, 80vw" : "(min-width: 768px) 30vw, 80vw"}
                   className="absolute inset-0 transition duration-[1.2s] ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-[1.04]"
                 />
-                <span className="absolute inset-0 bg-gradient-to-t from-noche via-noche/30 to-transparent" aria-hidden="true" />
+                <span className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-noche via-noche/70 to-transparent" aria-hidden="true" />
                 <span className="absolute inset-x-0 bottom-0 block p-5">
                   <span className="etiqueta inline-flex items-center gap-1.5 rounded-full bg-noche/70 px-2.5 py-1 text-celeste backdrop-blur">
                     <Icono nombre="ubicacion" className="h-3.5 w-3.5" />

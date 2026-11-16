@@ -107,7 +107,7 @@ export function PedidoService({ inicial }: { inicial?: DetallePedido }) {
   return (
     <dialog
       ref={ref}
-      className="hoja m-0 mt-auto max-h-[94dvh] w-full max-w-none overflow-hidden rounded-t-3xl border border-linea bg-marino p-0 text-white sm:m-auto sm:max-w-lg sm:rounded-3xl"
+      className="hoja m-0 mt-auto max-h-[94dvh] w-full max-w-none overflow-hidden rounded-t-3xl border border-linea bg-marino p-0 text-white sm:m-auto sm:max-w-lg sm:rounded-2xl"
       aria-labelledby="pedido-titulo"
       onClick={(e) => {
         if (e.target === ref.current) cerrar();
@@ -119,7 +119,7 @@ export function PedidoService({ inicial }: { inicial?: DetallePedido }) {
           <div className="relative border-b border-linea px-5 pb-4 pt-5">
             <div className="mx-auto mb-3 h-1 w-10 rounded-full bg-linea sm:hidden" aria-hidden="true" />
             <div className="flex items-start gap-3">
-              <Llama className="h-10 w-auto shrink-0" circulo={false} modo="viva" />
+              <Llama className="h-10 w-auto shrink-0" circulo={false} modo="quieta" />
               <div className="min-w-0 flex-1">
                 <p className="etiqueta text-celeste">Paso {paso + 1} de 3 · {PASOS[paso]}</p>
                 <h2 id="pedido-titulo" className="titular-medio mt-1 text-2xl">

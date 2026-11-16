@@ -13,7 +13,7 @@ export function TiraMarcas() {
         <Aparecer>
           <Link
             href="/service-oficial-peisa"
-            className="group relative flex h-full min-h-36 flex-col items-center justify-center gap-3 overflow-hidden rounded-3xl bg-white px-6 py-7 shadow-[0_20px_60px_-25px_rgb(227_50_42/0.55)] transition duration-500 hover:-translate-y-0.5"
+            className="group relative flex h-full min-h-36 flex-col items-center justify-center gap-3 overflow-hidden rounded-2xl bg-white px-6 py-7 shadow-[0_20px_60px_-25px_rgb(227_50_42/0.55)] transition duration-500 hover:-translate-y-0.5"
           >
             <img
               src={peisa.logo.src}

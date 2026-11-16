@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TarjetaPedido } from "@/components/TarjetaPedido";
 import { notFound } from "next/navigation";
 import { paginasZona, getPaginaZona, zonasDePagina, zonas } from "@/content/zonas";
 import { negocio, direccionCompleta } from "@/content/negocio";
@@ -60,7 +61,7 @@ export default async function PaginaZona({ params }: { params: Promise<{ slug: s
         pedido={{ zona: incluidas[0]?.nombre }}
         mensajeWhatsApp={`Hola Gesetec, necesito service para mi caldera en ${incluidas[0]?.nombre ?? p.nombre}.`}
         aparte={
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-[2rem] border border-linea shadow-[0_30px_80px_-30px_rgb(51_113_209/0.5)]">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl border border-linea ">
             <Foto nombre={p.foto} alt={`Calderas y calefacción en ${p.nombre}`} sizes="(min-width: 1024px) 26rem, 90vw" prioridad />
             <span className="etiqueta absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-noche/75 px-3 py-1.5 text-celeste backdrop-blur">
               <Icono nombre="ubicacion" className="h-3.5 w-3.5" /> {p.nombre}
@@ -81,7 +82,7 @@ export default async function PaginaZona({ params }: { params: Promise<{ slug: s
             {p.secciones && (
               <div className="mt-8 grid gap-3">
                 {p.secciones.map((s) => (
-                  <div key={s.titulo} className="rounded-3xl border border-linea bg-marino/60 p-5">
+                  <div key={s.titulo} className="rounded-2xl border border-linea bg-marino/60 p-5">
                     <h3 className="titular-medio text-xl">{s.titulo}</h3>
                     <p className="mt-2 text-[0.97rem] leading-relaxed text-celeste">{s.texto}</p>
                   </div>
@@ -89,8 +90,8 @@ export default async function PaginaZona({ params }: { params: Promise<{ slug: s
               </div>
             )}
           </div>
-          <div className="space-y-4">
-            <div className="rounded-3xl border border-linea bg-marino/70 p-6">
+          <div className="flex flex-col gap-4">
+            <div className="rounded-2xl border border-linea bg-marino/70 p-6">
               <h3 className="titular-medio text-xl">Lo que más nos piden en {p.nombre}</h3>
               <ul className="mt-4 space-y-2.5">
                 {p.destacados.map((d) => (
@@ -101,7 +102,7 @@ export default async function PaginaZona({ params }: { params: Promise<{ slug: s
                 ))}
               </ul>
             </div>
-            <div className="rounded-3xl border border-linea bg-marino/40 p-6 text-[0.95rem] text-celeste">
+            <div className="rounded-2xl border border-linea bg-marino/40 p-6 text-[0.95rem] text-celeste">
               <p className="font-semibold text-white">Salimos desde Villa Gesell</p>
               <p className="mt-1">
                 {direccionCompleta} · Tel. y WhatsApp {negocio.telefono.visible}
@@ -113,7 +114,7 @@ export default async function PaginaZona({ params }: { params: Promise<{ slug: s
               )}
             </div>
             {resena && (
-              <figure className="rounded-3xl border border-linea bg-marino/70 p-6">
+              <figure className="rounded-2xl border border-linea bg-marino/70 p-6">
                 <div className="flex gap-0.5 text-[#f7b733]" aria-label={`${resena.estrellas} de 5 estrellas`} role="img">
                   {Array.from({ length: resena.estrellas }).map((_, i) => (
                     <Icono key={i} nombre="estrella" className="h-4 w-4" />
@@ -125,6 +126,7 @@ export default async function PaginaZona({ params }: { params: Promise<{ slug: s
                 </figcaption>
               </figure>
             )}
+            <TarjetaPedido zona={incluidas[0]?.nombre} mensaje={`Hola Gesetec, necesito service para mi caldera en ${incluidas[0]?.nombre ?? p.nombre}.`} />
           </div>
         </div>
       </section>

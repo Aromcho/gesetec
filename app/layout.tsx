@@ -8,7 +8,6 @@ import { Cabecera } from "@/components/Cabecera";
 import { Pie } from "@/components/Pie";
 import { AccionesFijas } from "@/components/AccionesFijas";
 import { PedidoCarga } from "@/components/PedidoCarga";
-import { Calor } from "@/components/Calor";
 import { Analytics } from "@/components/Analytics";
 
 // Archivo (variable: peso 100–900 y ancho 62–125%). Los titulares usan el ancho máximo, como el logo.
@@ -60,7 +59,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Pie />
         <AccionesFijas />
         <PedidoCarga />
-        <Calor />
         <Analytics />
         <JsonLd datos={negocioSchema()} />
       </body>

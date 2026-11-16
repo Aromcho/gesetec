@@ -1,6 +1,6 @@
 /**
  * EQUIPOS — modelos que Gesetec vende, instala o atiende y que aparecen en sus publicaciones.
- * Se muestran en /service-oficial-peisa y generan el JSON-LD Product (sin precios).
+ * Se muestran en /service-oficial-peisa. El JSON-LD Product sólo se genera si el equipo tiene precio en content/venta.ts.
  * Pendiente de confirmar con el cliente: lista completa de modelos PEISA que vende hoy.
  */
 

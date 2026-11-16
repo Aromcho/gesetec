@@ -45,7 +45,7 @@ export function VisorTrabajos({ trabajos, children }: { trabajos: TrabajoVisor[]
       {children}
       <dialog
         ref={ref}
-        className="hoja m-0 mt-auto max-h-[96dvh] w-full max-w-none overflow-y-auto rounded-t-3xl border border-linea bg-marino p-0 text-white md:m-auto md:max-w-4xl md:rounded-3xl"
+        className="hoja m-0 mt-auto max-h-[96dvh] w-full max-w-none overflow-y-auto rounded-t-3xl border border-linea bg-marino p-0 text-white md:m-auto md:max-w-4xl md:rounded-2xl"
         aria-label={actual?.titulo ?? "Trabajo"}
         onClose={() => setActual(null)}
         onClick={(e) => {

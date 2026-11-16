@@ -2,8 +2,8 @@ import { Llama } from "./Llama";
 import { LLAMA } from "./llama-trazos";
 
 /**
- * La llama grande de la portada: se enciende al cargar, late despacio y baja con parallax al hacer scroll.
- * Alrededor gira el sello "Service oficial PEISA". Todo en CSS (sin JavaScript).
+ * La llama de la portada con el sello "Service oficial PEISA" girando alrededor.
+ * El halo es un degradé difuminado (blur), sin bordes duros; todo en CSS (sin JavaScript).
  */
 export function LlamaPortada({ className = "" }: { className?: string }) {
   const { ancho, alto, circulo } = LLAMA;
@@ -14,7 +14,16 @@ export function LlamaPortada({ className = "" }: { className?: string }) {
   const oy = ((circulo.cy + 60) / (alto + 120)) * 100;
 
   return (
-    <div className={`parallax-llama relative ${className}`} aria-hidden="true">
+    <div className={`relative ${className}`} aria-hidden="true">
+      <div
+        className="absolute aspect-square w-[78%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-2xl"
+        style={{
+          left: `${ox}%`,
+          top: `${oy}%`,
+          background:
+            "radial-gradient(circle at 38% 42%, rgb(51 113 209 / 0.55), transparent 62%), radial-gradient(circle at 64% 62%, rgb(227 50 42 / 0.5), transparent 60%)",
+        }}
+      />
       <div className="sello-girar absolute inset-0 will-change-transform" style={{ transformOrigin: `${ox}% ${oy}%` }}>
         <svg viewBox={`-60 -60 ${ancho + 120} ${alto + 120}`} className="h-full w-full">
           <defs>
@@ -28,7 +37,7 @@ export function LlamaPortada({ className = "" }: { className?: string }) {
           <circle cx={circulo.cx} cy={circulo.cy} r={R + 13} fill="none" stroke="#B9C8F0" strokeOpacity="0.14" strokeDasharray="2 6" />
         </svg>
       </div>
-      <Llama modo="encender" brillo className="relative z-10 h-full w-full" />
+      <Llama modo="encender" margen className="relative z-10 h-full w-full" />
     </div>
   );
 }

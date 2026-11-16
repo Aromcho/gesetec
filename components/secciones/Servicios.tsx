@@ -2,10 +2,12 @@ import Link from "next/link";
 import { servicios, type Servicio } from "@/content/servicios";
 import { Encabezado } from "../Encabezado";
 import { Icono } from "../Icono";
-import { Aparecer } from "../Aparecer";
 import { Foto } from "../Foto";
 
-/** Grilla de servicios con enlace a cada página. */
+/**
+ * Servicios como índice numerado (01–07): se lee de un vistazo y cada fila lleva a su página.
+ * Cada fila lleva la foto de un trabajo real como miniatura.
+ */
 export function Servicios({
   lista = servicios,
   titulo = "Todo lo que tu calefacción necesita",
@@ -17,43 +19,56 @@ export function Servicios({
   titulo?: string;
   etiqueta?: string;
   bajada?: string;
-  /** El primer servicio ocupa dos filas con foto (grilla de 4 columnas en escritorio). */
+  /** Portada: la fila 01 abre con la foto grande al costado del encabezado. */
   destacado?: boolean;
 }) {
+  const primera = lista[0]?.fotos[1] ?? lista[0]?.fotos[0];
   return (
     <section id="servicios" aria-labelledby="servicios-titulo" className="mx-auto max-w-6xl px-5 md:px-6">
-      <Encabezado etiqueta={etiqueta} titulo={titulo} bajada={bajada} id="servicios-titulo" />
-      <ul className={`mt-8 grid gap-3 sm:grid-cols-2 ${destacado ? "lg:grid-cols-4" : "lg:grid-cols-3"}`}>
+      <div className={destacado && primera ? "grid gap-8 lg:grid-cols-[1fr_20rem] lg:items-end" : ""}>
+        <Encabezado etiqueta={etiqueta} titulo={titulo} bajada={bajada || undefined} id="servicios-titulo" />
+        {destacado && primera && (
+          <div className="hidden aspect-[4/3] overflow-hidden rounded-2xl border border-linea lg:block">
+            <Foto nombre={primera} alt={`${lista[0].nombre} – trabajo de Gesetec`} sizes="20rem" />
+          </div>
+        )}
+      </div>
+
+      <ol className="mt-10 border-b border-linea">
         {lista.map((s, i) => (
-          <Aparecer key={s.slug} como="li" retraso={(i % 3) * 0.06} className={destacado && i === 0 ? "lg:row-span-2" : ""}>
+          <li key={s.slug} className="border-t border-linea">
             <Link
               href={`/servicios/${s.slug}`}
-              className="group relative flex h-full gap-4 overflow-hidden rounded-3xl border border-linea bg-marino/70 p-5 transition duration-500 hover:-translate-y-0.5 hover:border-[color:var(--acento)] hover:bg-marino md:flex-col md:p-7"
+              className="group grid grid-cols-[4rem_1fr_auto] items-center gap-4 py-5 md:grid-cols-[3.5rem_7rem_minmax(0,1fr)_minmax(0,1.15fr)_auto] md:gap-7 md:py-6"
             >
-              <span
-                aria-hidden="true"
-                className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[radial-gradient(circle,var(--acento-suave),transparent_70%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-              />
-              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl border border-linea bg-noche text-azul transition-colors duration-500 group-hover:border-rojo/40 group-hover:text-rojo">
-                <Icono nombre={s.icono} className="h-6 w-6" />
-              </span>
-              <span className="min-w-0 flex-1">
-                <span className="etiqueta text-humo">{String(i + 1).padStart(2, "0")}</span>
-                <h3 className="titular-medio mt-1 text-xl md:text-[1.4rem]">{s.nombre}</h3>
-                <p className="mt-2 text-[0.95rem] leading-relaxed text-celeste">{s.resumen}</p>
-                {destacado && i === 0 && s.fotos[0] && (
-                  <span className="mt-5 hidden aspect-[4/3] overflow-hidden rounded-2xl border border-linea lg:block">
-                    <Foto nombre={s.fotos[0]} alt={`${s.nombre} – trabajo de Gesetec`} sizes="22vw" />
+              <span className="dato hidden text-humo transition-colors group-hover:text-rojo md:block md:text-sm">{String(i + 1).padStart(2, "0")}</span>
+              <span className="relative aspect-square w-16 overflow-hidden rounded-xl border border-linea bg-marino md:aspect-[4/3] md:w-28">
+                {s.fotos[0] ? (
+                  <Foto
+                    nombre={s.fotos[0]}
+                    alt=""
+                    sizes="(min-width: 768px) 112px, 64px"
+                    className="transition duration-500 md:opacity-75 md:grayscale-[35%] md:group-hover:scale-105 md:group-hover:opacity-100 md:group-hover:grayscale-0"
+                  />
+                ) : (
+                  <span className="grid h-full place-items-center text-azul">
+                    <Icono nombre={s.icono} className="h-6 w-6" />
                   </span>
                 )}
-                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-white">
-                  Ver servicio <Icono nombre="flecha" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </span>
+              </span>
+              <span className="min-w-0">
+                <span className="dato text-humo md:hidden">{String(i + 1).padStart(2, "0")}</span>
+                <h3 className="titular-medio text-[1.2rem] leading-tight md:text-[1.5rem]">{s.nombre}</h3>
+                <p className="mt-1.5 line-clamp-2 text-[0.92rem] leading-relaxed text-celeste md:hidden">{s.resumen}</p>
+              </span>
+              <p className="hidden text-[0.97rem] leading-relaxed text-celeste md:block">{s.resumen}</p>
+              <span className="grid h-10 w-10 place-items-center rounded-full border border-linea text-celeste transition group-hover:border-rojo group-hover:bg-rojo group-hover:text-white">
+                <Icono nombre="flecha" className="h-4 w-4" />
               </span>
             </Link>
-          </Aparecer>
+          </li>
         ))}
-      </ul>
+      </ol>
     </section>
   );
 }

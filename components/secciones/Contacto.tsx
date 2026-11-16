@@ -17,7 +17,7 @@ export function Contacto() {
         bajada="La forma más rápida es WhatsApp: contanos la marca de tu caldera, qué le pasa y en qué zona estás."
       />
       <div className="mt-8 grid gap-5 lg:grid-cols-[1fr_1.15fr]">
-        <div className="rounded-3xl border border-linea bg-marino/80 p-6 md:p-8">
+        <div className="rounded-2xl border border-linea bg-marino/80 p-6 md:p-8">
           <AbiertoAhora />
           <dl className="mt-6 space-y-5">
             <div className="flex gap-4">
@@ -80,7 +80,7 @@ export function Contacto() {
               target="_blank"
               rel="noopener noreferrer"
               data-ubicacion="contacto"
-              className="inline-flex min-h-13 items-center justify-center gap-2 rounded-2xl bg-whatsapp px-5 font-semibold text-[#05341a] transition hover:brightness-110"
+              className="inline-flex min-h-13 items-center justify-center gap-2 rounded-xl bg-whatsapp px-5 font-semibold text-[#05341a] transition hover:brightness-110"
             >
               <Icono nombre="whatsapp" className="h-5 w-5" /> WhatsApp
             </a>

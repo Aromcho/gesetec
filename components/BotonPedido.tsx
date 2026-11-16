@@ -22,7 +22,7 @@ export function BotonPedido({ marca, servicio, zona, className = "", children = 
     <button
       type="button"
       onClick={() => abrirPedido({ marca, servicio, zona })}
-      className={`group inline-flex min-h-13 items-center justify-center gap-2.5 rounded-2xl px-6 py-3.5 transition duration-300 active:scale-[0.98] ${estilos} ${className}`}
+      className={`group inline-flex min-h-13 items-center justify-center gap-2.5 rounded-xl px-6 py-3.5 transition duration-300 active:scale-[0.98] ${estilos} ${className}`}
     >
       {children}
       <Icono nombre="flecha" className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />

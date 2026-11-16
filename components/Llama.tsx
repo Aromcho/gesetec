@@ -8,6 +8,8 @@ interface Props {
   circulo?: boolean;
   /** Halo de luz detrás de la llama. */
   brillo?: boolean;
+  /** Mismo margen que con halo, pero sin dibujarlo (la portada usa un halo difuminado por CSS). */
+  margen?: boolean;
   titulo?: string;
 }
 
@@ -15,9 +17,9 @@ interface Props {
  * La llama del logo de Gesetec: mitad azul (frío) y mitad roja (calor).
  * Es el elemento firma del sitio. Las animaciones son CSS (globals.css) para no sumar JavaScript.
  */
-export function Llama({ className, modo = "viva", circulo = true, brillo = false, titulo }: Props) {
+export function Llama({ className, modo = "viva", circulo = true, brillo = false, margen = false, titulo }: Props) {
   const { ancho, alto, circulo: c } = LLAMA;
-  const pad = brillo ? 60 : 2;
+  const pad = brillo || margen ? 60 : 2;
   const clase = modo === "encender" ? "llama-encender" : modo === "viva" ? "llama-viva" : "";
   const id = `llama-${modo}-${brillo ? "b" : "n"}`;
   return (

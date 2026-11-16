@@ -6,6 +6,7 @@ import { TiraMarcas } from "@/components/secciones/TiraMarcas";
 import { Servicios } from "@/components/secciones/Servicios";
 import { BloquePeisa } from "@/components/secciones/BloquePeisa";
 import { BloquePiscinas } from "@/components/secciones/BloquePiscinas";
+import { EquiposVenta } from "@/components/secciones/EquiposVenta";
 import { Trabajos } from "@/components/secciones/Trabajos";
 import { Resenas } from "@/components/secciones/Resenas";
 import { Zonas } from "@/components/secciones/Zonas";
@@ -37,6 +38,9 @@ export default function Inicio() {
         <BloquePeisa />
       </div>
       <BloquePiscinas fondo="fondo-piscina-climatizada-atardecer-pinos" />
+      <div className="mt-6 md:mt-10">
+        <EquiposVenta />
+      </div>
       <div className="mt-16 md:mt-24">
         <Trabajos lista={trabajos} />
       </div>
