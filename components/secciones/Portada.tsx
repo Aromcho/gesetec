@@ -4,6 +4,7 @@ import { peisa } from "@/content/marcas";
 import { AbiertoAhora } from "../AbiertoAhora";
 import { BotonPedido } from "../BotonPedido";
 import { Foto } from "../Foto";
+import { LlamaPortada } from "../LlamaPortada";
 import { Icono } from "../Icono";
 
 /**
@@ -15,6 +16,13 @@ export function Portada() {
     <section className="relative isolate overflow-hidden pb-14 pt-24 md:pb-20 md:pt-32" aria-labelledby="h1">
       {/* Fondo: un solo degradé marino, sin adornos */}
       <div aria-hidden="true" className="absolute inset-x-0 top-0 -z-10 h-[42rem] bg-[linear-gradient(180deg,#0b1a38_0%,rgb(11_26_56/0.55)_45%,transparent_100%)]" />
+      {/* Celular: la llama con el sello de fondo, detrás del título, con los bordes difuminados */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-24 top-10 -z-10 h-[22rem] w-[19.5rem] opacity-40 [mask-image:radial-gradient(closest-side,#000_50%,transparent_100%)] lg:hidden"
+      >
+        <LlamaPortada className="h-full w-full" />
+      </div>
 
       <div className="mx-auto grid max-w-6xl gap-x-14 gap-y-9 px-5 md:px-6 lg:grid-cols-[1.12fr_0.88fr] lg:items-center">
         <div className="lg:col-start-1 lg:row-start-1">
@@ -22,7 +30,7 @@ export function Portada() {
           <h1 id="h1" className="titular mt-5 text-[2.2rem] xs:text-[2.45rem] sm:text-[2.9rem] lg:text-[3.5rem]">
             Venta y service oficial de calderas en <span className="text-rojo">Villa Gesell</span>
           </h1>
-          <p className="mt-5 max-w-[60ch] text-[1.05rem] leading-relaxed text-celeste md:text-[1.1rem]">
+          <p className="mt-4 max-w-[60ch] text-[0.9rem] leading-[1.6] text-celeste/85 md:mt-5 md:text-[1.1rem] md:leading-relaxed md:text-celeste">
             Reparación, mantenimiento e instalación de calderas, calefacción central y climatización de piscinas en Villa Gesell, Mar de las
             Pampas, Mar Azul, Cariló, Valeria del Mar, Pinamar, Costa Esmeralda, los barrios privados de la zona y Madariaga. Técnico de calderas
             matriculado y repuestos originales.
