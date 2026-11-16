@@ -11,7 +11,7 @@ if [ -s "$NVM_DIR/nvm.sh" ]; then
   nvm use --silent default >/dev/null 2>&1 || true
 fi
 
-cd /var/www/gesetec
+cd "$(dirname "$0")/.."
 
 # Una sola actualización a la vez.
 exec 9>/tmp/gesetec-actualizar.lock

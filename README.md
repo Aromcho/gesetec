@@ -94,17 +94,16 @@ Marcá los tres como **eventos clave** en GA4.
 
 ## Deploy en el VPS (Hostinger, Nginx, sin Node corriendo)
 
-El VPS clona el repo, hace el build y Nginx sirve `out/`. No hay proceso de Node en producción.
+El VPS clona el repo en `/root/gesetec`, hace el build y copia `out/` a `/var/www/gesetecalderas.com`, que es lo que sirve Nginx (Nginx corre como `www-data` y no puede leer `/root`). No hay proceso de Node en producción.
 
 ### 1. Primera vez
 
 ```bash
 # Clonar (deploy key de solo lectura ya configurada con el alias github-gesetec)
-sudo mkdir -p /var/www/gesetec && sudo chown "$USER":"$USER" /var/www/gesetec
-git clone git@github-gesetec:Aromcho/gesetec.git /var/www/gesetec
-cd /var/www/gesetec
+git clone git@github-gesetec:Aromcho/gesetec.git /root/gesetec
+cd /root/gesetec
 cp .env.example .env.local   # y completá NEXT_PUBLIC_GA_ID
-npm ci && npm run build
+bash deploy/actualizar.sh    # build + copia out/ a /var/www/gesetecalderas.com
 
 # Nginx (no toca los otros sitios: es un archivo nuevo)
 sudo cp deploy/nginx-gesetecalderas.com.conf /etc/nginx/sites-available/gesetecalderas.com
@@ -136,16 +135,16 @@ Certbot deja la renovación automática programada.
 ### 4. Actualizar el sitio
 
 ```bash
-bash /var/www/gesetec/deploy/actualizar.sh
+bash /root/gesetec/deploy/actualizar.sh
 ```
 
-Para que se publique solo cada vez que se sube algo a GitHub, en el VPS (con el usuario dueño de `/var/www/gesetec`) se agrega a `crontab -e`:
+Para que se publique solo cada vez que se sube algo a GitHub, en el VPS (como root, dueño de `/root/gesetec`) se agrega a `crontab -e`:
 
 ```
-*/5 * * * * bash /var/www/gesetec/deploy/auto-actualizar.sh >> $HOME/gesetec-deploy.log 2>&1
+*/5 * * * * bash /root/gesetec/deploy/auto-actualizar.sh >> $HOME/gesetec-deploy.log 2>&1
 ```
 
-Cada 5 minutos revisa `main`; si hay commits nuevos, actualiza y regenera `out/`. Si no hay nada nuevo, no hace nada.
+Cada 5 minutos revisa `main`; si hay commits nuevos, actualiza, regenera `out/` y lo publica. Si no hay nada nuevo, no hace nada.
 
 ### Qué hace la configuración de Nginx
 
