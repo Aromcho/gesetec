@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TarjetaPedido } from "@/components/TarjetaPedido";
 import { notFound } from "next/navigation";
 import { marcas, getMarca } from "@/content/marcas";
 import { getServicio } from "@/content/servicios";
@@ -44,7 +45,7 @@ export default async function PaginaMarca({ params }: { params: Promise<{ slug: 
         pedido={{ marca: m.nombre }}
         mensajeWhatsApp={`Hola Gesetec, necesito service para mi equipo ${m.nombre}.`}
         aparte={
-          <div className="mx-auto grid aspect-[4/3] w-full max-w-sm place-items-center rounded-[2rem] border border-linea bg-[radial-gradient(circle_at_50%_40%,#12234a,#0b1a38_70%)] p-10">
+          <div className="mx-auto grid aspect-[4/3] w-full max-w-sm place-items-center rounded-2xl border border-linea bg-[radial-gradient(circle_at_50%_40%,#12234a,#0b1a38_70%)] p-10">
             {m.logo ? (
               <img src={m.logo.src} alt={m.nombre} width={m.logo.ancho} height={m.logo.alto} className="h-auto max-h-24 w-auto max-w-[80%]" />
             ) : (
@@ -64,8 +65,8 @@ export default async function PaginaMarca({ params }: { params: Promise<{ slug: 
               ))}
             </div>
           </div>
-          <div className="space-y-4">
-            <div className="rounded-3xl border border-linea bg-marino/70 p-6">
+          <div className="flex flex-col gap-4">
+            <div className="rounded-2xl border border-linea bg-marino/70 p-6">
               <h3 className="titular-medio text-xl">Servicios {m.nombre}</h3>
               <ul className="mt-4 space-y-2.5">
                 {m.servicios.map((i) => (
@@ -76,7 +77,7 @@ export default async function PaginaMarca({ params }: { params: Promise<{ slug: 
                 ))}
               </ul>
             </div>
-            <div className="rounded-3xl border border-linea bg-marino/40 p-6">
+            <div className="rounded-2xl border border-linea bg-marino/40 p-6">
               <h3 className="titular-medio text-xl">Equipos</h3>
               <ul className="mt-4 space-y-2">
                 {m.equipos.map((e) => (
@@ -86,6 +87,7 @@ export default async function PaginaMarca({ params }: { params: Promise<{ slug: 
                 ))}
               </ul>
             </div>
+            <TarjetaPedido marca={m.nombre} mensaje={`Hola Gesetec, necesito service para mi equipo ${m.nombre}.`} />
           </div>
         </div>
       </section>
@@ -129,7 +131,7 @@ export default async function PaginaMarca({ params }: { params: Promise<{ slug: 
       <JsonLd
         datos={[
           servicioSchema({ nombre: m.h1, seoDescripcion: m.seoDescripcion, ruta, tipo: `Servicio técnico ${m.nombre}` }),
-          ...productos.map(productoSchema),
+          ...productos.map(productoSchema).filter((d) => d !== null),
         ]}
       />
     </>

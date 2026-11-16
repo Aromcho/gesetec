@@ -13,16 +13,37 @@ function Estrellas({ n }: { n: number }) {
   );
 }
 
+const slug = (t: string) =>
+  t
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+
 function Tarjeta({ r }: { r: Resena }) {
   return (
-    <figure className="flex h-full flex-col rounded-3xl border border-linea bg-marino/80 p-6">
+    <figure className="flex h-full flex-col rounded-2xl border border-linea bg-marino/80 p-6">
       <div className="flex items-center justify-between gap-3">
         <Estrellas n={r.estrellas} />
         <span className="text-xs text-humo">{r.fecha}</span>
       </div>
-      <blockquote className="mt-4 flex-1 whitespace-pre-line text-[1.02rem] leading-relaxed text-white/90">“{r.texto}”</blockquote>
+      {r.texto.length > 240 ? (
+        <div className="relative mt-4 flex-1">
+          <input type="checkbox" id={`resena-${slug(r.autor)}`} className="peer sr-only" />
+          <blockquote className="line-clamp-5 whitespace-pre-line text-[1.02rem] leading-relaxed text-white/90 peer-checked:line-clamp-none">“{r.texto}”</blockquote>
+          <label
+            htmlFor={`resena-${slug(r.autor)}`}
+            className="mt-2 inline-block cursor-pointer text-sm font-semibold text-celeste underline-offset-4 hover:underline peer-checked:hidden peer-focus-visible:outline"
+          >
+            Leer más
+          </label>
+        </div>
+      ) : (
+        <blockquote className="mt-4 flex-1 whitespace-pre-line text-[1.02rem] leading-relaxed text-white/90">“{r.texto}”</blockquote>
+      )}
       <figcaption className="mt-5 flex items-center gap-3 border-t border-linea pt-4">
-        <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-gradient-to-br from-azul to-rojo text-sm font-bold">
+        <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-marino-2 text-sm font-bold text-celeste ring-1 ring-linea">
           {r.autor.trim().charAt(0).toUpperCase()}
         </span>
         <span className="min-w-0">
@@ -83,7 +104,7 @@ export function Resenas({ cantidad = 6 }: { cantidad?: number }) {
       {resto.length > 0 && (
         <details className="group mt-4">
           <summary className="mx-auto flex w-fit cursor-pointer items-center gap-2 rounded-full border border-linea px-5 py-3 text-sm text-celeste transition hover:text-white">
-            <span className="group-open:hidden">Ver {resto.length} reseñas más</span>
+            <span className="group-open:hidden">Ver más reseñas</span>
             <span className="hidden group-open:inline">Ver menos</span>
           </summary>
           <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

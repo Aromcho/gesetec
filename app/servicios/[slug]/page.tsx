@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TarjetaPedido } from "@/components/TarjetaPedido";
 import { notFound } from "next/navigation";
 import { servicios, getServicio } from "@/content/servicios";
 import { getMarca } from "@/content/marcas";
@@ -47,7 +48,7 @@ export default async function PaginaServicio({ params }: { params: Promise<{ slu
         mensajeWhatsApp={`Hola Gesetec, quiero consultar por: ${s.nombre.toLowerCase()}.`}
         aparte={
           s.fotos[0] ? (
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-[2rem] border border-linea shadow-[0_30px_80px_-30px_rgb(51_113_209/0.5)]">
+            <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl border border-linea ">
               <Foto nombre={s.fotos[0]} alt={`${s.nombre} en Villa Gesell – Gesetec Calderas`} sizes="(min-width: 1024px) 26rem, 90vw" prioridad />
             </div>
           ) : undefined
@@ -64,8 +65,8 @@ export default async function PaginaServicio({ params }: { params: Promise<{ slu
               ))}
             </div>
           </div>
-          <div className="space-y-4">
-            <div className="rounded-3xl border border-linea bg-marino/70 p-6">
+          <div className="flex flex-col gap-4">
+            <div className="rounded-2xl border border-linea bg-marino/70 p-6">
               <h3 className="titular-medio text-xl">Qué incluye</h3>
               <ul className="mt-4 space-y-2.5">
                 {s.incluye.map((i) => (
@@ -76,7 +77,7 @@ export default async function PaginaServicio({ params }: { params: Promise<{ slu
                 ))}
               </ul>
             </div>
-            <div className="rounded-3xl border border-rojo/25 bg-[linear-gradient(135deg,rgb(155_28_36/0.25),rgb(11_26_56/0.6))] p-6">
+            <div className="rounded-2xl border border-rojo/25 bg-[linear-gradient(135deg,rgb(155_28_36/0.25),rgb(11_26_56/0.6))] p-6">
               <h3 className="titular-medio text-xl">{s.senales.titulo}</h3>
               <ul className="mt-4 space-y-2.5">
                 {s.senales.items.map((i) => (
@@ -87,6 +88,7 @@ export default async function PaginaServicio({ params }: { params: Promise<{ slu
                 ))}
               </ul>
             </div>
+            <TarjetaPedido servicio={s.pedido} mensaje={`Hola Gesetec, quiero consultar por: ${s.nombre.toLowerCase()}.`} />
           </div>
         </div>
       </section>
@@ -95,7 +97,7 @@ export default async function PaginaServicio({ params }: { params: Promise<{ slu
         <section aria-label="Fotos de trabajos" className="mx-auto mt-16 max-w-6xl px-5 md:px-6">
           <ul className="grid grid-cols-2 gap-3 md:grid-cols-3">
             {s.fotos.slice(1).map((f) => (
-              <li key={f} className="aspect-square overflow-hidden rounded-3xl border border-linea">
+              <li key={f} className="aspect-square overflow-hidden rounded-2xl border border-linea">
                 <Foto nombre={f} alt={`${s.nombre}: ${f.replace(/-/g, " ")}`} sizes="(min-width: 768px) 30vw, 46vw" />
               </li>
             ))}

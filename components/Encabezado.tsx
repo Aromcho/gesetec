@@ -8,19 +8,19 @@ interface Props {
   nivel?: "h2" | "h3";
 }
 
-/** Encabezado de sección: etiqueta chica + titular ancho. */
+/** Encabezado de sección: etiqueta chica con línea roja + titular ancho de dos líneas como máximo. */
 export function Encabezado({ etiqueta, titulo, bajada, id, centrado = false, nivel = "h2" }: Props) {
   const H = nivel;
   return (
     <header className={`max-w-3xl ${centrado ? "mx-auto text-center" : ""}`}>
-      <p className="etiqueta texto-acento flex items-center gap-2 transition-colors duration-700" style={centrado ? { justifyContent: "center" } : undefined}>
-        <span className="inline-block h-px w-6 bg-acento" aria-hidden="true" />
+      <p className="etiqueta flex items-center gap-2.5 text-celeste" style={centrado ? { justifyContent: "center" } : undefined}>
+        <span className="inline-block h-[2px] w-6 bg-rojo" aria-hidden="true" />
         {etiqueta}
       </p>
-      <H id={id} className="titular-medio mt-3 text-[1.85rem] leading-[1.02] xs:text-[2.1rem] md:text-5xl">
+      <H id={id} className={`titular-medio mt-3 max-w-[22ch] text-[1.75rem] xs:text-[1.95rem] md:text-[2.5rem] ${centrado ? "mx-auto" : ""}`}>
         {titulo}
       </H>
-      {bajada && <p className="mt-4 text-base leading-relaxed text-celeste md:text-lg">{bajada}</p>}
+      {bajada && <p className={`mt-4 max-w-[62ch] text-base leading-relaxed text-celeste md:text-[1.075rem] ${centrado ? "mx-auto" : ""}`}>{bajada}</p>}
     </header>
   );
 }

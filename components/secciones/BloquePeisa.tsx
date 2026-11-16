@@ -17,22 +17,16 @@ const PUNTOS = [
 export function BloquePeisa() {
   const conFoto = equiposPeisa.filter((e) => e.foto && e.categoria.startsWith("Caldera"));
   return (
-    <section aria-labelledby="peisa-titulo" className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(120%_80%_at_85%_0%,#9B1C24_0%,#4a0d14_38%,#0B1A38_78%)]" aria-hidden="true" />
-      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-noche to-transparent" aria-hidden="true" />
-      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-noche to-transparent" aria-hidden="true" />
-      <div
-        className="absolute inset-0 opacity-[0.07] [background-image:repeating-linear-gradient(90deg,#fff_0_1px,transparent_1px_64px)]"
-        aria-hidden="true"
-      />
-      <div className="relative mx-auto max-w-6xl px-5 py-20 md:px-6 md:py-28">
+    <section aria-labelledby="peisa-titulo" className="relative overflow-hidden bg-bordo">
+      <div className="absolute inset-0 bg-[linear-gradient(160deg,rgb(255_255_255/0.06),transparent_40%,rgb(0_0_0/0.22))]" aria-hidden="true" />
+      <div className="relative mx-auto max-w-6xl px-5 py-20 md:px-6 md:py-24">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-end">
           <div>
-            <span className="inline-flex items-center rounded-2xl bg-white px-4 py-3 shadow-xl">
+            <span className="inline-flex items-center rounded-xl bg-white px-4 py-3">
               <img src={peisa.logo.src} alt="PEISA" width={peisa.logo.ancho} height={peisa.logo.alto} loading="lazy" className="h-7 w-auto md:h-9" />
             </span>
-            <p className="etiqueta mt-6 text-[#ffb3ad]">Service Peisa en Villa Gesell y la costa</p>
-            <h2 id="peisa-titulo" className="titular mt-3 text-[2.3rem] xs:text-[2.6rem] md:text-6xl">
+            <p className="etiqueta mt-6 text-white/75">Service Peisa en Villa Gesell y la costa</p>
+            <h2 id="peisa-titulo" className="titular mt-3 max-w-[16ch] text-[2.1rem] xs:text-[2.35rem] md:text-[2.75rem]">
               Tu PEISA, en manos de su service oficial
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/85">
@@ -42,8 +36,8 @@ export function BloquePeisa() {
           </div>
           <ul className="grid gap-3 sm:grid-cols-2">
             {PUNTOS.map((p) => (
-              <li key={p} className="flex items-start gap-3 rounded-2xl border border-white/15 bg-white/[0.06] p-4 backdrop-blur-sm">
-                <Icono nombre="check" className="mt-0.5 h-5 w-5 shrink-0 text-[#ff8a80]" />
+              <li key={p} className="flex min-h-[4.5rem] items-center gap-3 rounded-xl border border-white/15 bg-black/15 p-4">
+                <Icono nombre="check" className="h-5 w-5 shrink-0 text-white" />
                 <span className="text-[0.98rem] leading-snug">{p}</span>
               </li>
             ))}
@@ -53,7 +47,7 @@ export function BloquePeisa() {
         <ul className="carrusel -mx-5 mt-12 flex gap-4 overflow-x-auto px-5 pb-2 md:mx-0 md:grid md:grid-cols-4 md:px-0">
           {conFoto.map((e, i) => (
             <Aparecer key={e.id} como="li" retraso={i * 0.06} className="w-[64%] shrink-0 xs:w-[56%] md:w-auto">
-              <figure className="group overflow-hidden rounded-3xl border border-white/15 bg-noche/50">
+              <figure className="group h-full overflow-hidden rounded-xl border border-white/15 bg-black/20">
                 <div className="aspect-[4/5] overflow-hidden">
                   <Foto
                     nombre={e.foto!}
@@ -63,7 +57,7 @@ export function BloquePeisa() {
                   />
                 </div>
                 <figcaption className="p-4">
-                  <p className="etiqueta text-[#ffb3ad]">{e.categoria}</p>
+                  <p className="dato text-white/70">{e.categoria}</p>
                   <p className="titular-medio mt-1 text-lg">PEISA {e.modelo}</p>
                 </figcaption>
               </figure>
@@ -74,7 +68,7 @@ export function BloquePeisa() {
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">
           <Link
             href="/service-oficial-peisa"
-            className="group inline-flex min-h-13 items-center justify-center gap-2 rounded-2xl bg-white px-6 font-semibold text-[#9B1C24] transition hover:bg-white/90"
+            className="group inline-flex min-h-13 items-center justify-center gap-2 rounded-xl bg-white px-6 font-semibold text-bordo transition hover:bg-white/90"
           >
             Todo sobre el service oficial PEISA
             <Icono nombre="flecha" className="h-5 w-5 transition-transform group-hover:translate-x-1" />

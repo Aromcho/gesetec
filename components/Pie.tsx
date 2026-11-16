@@ -4,13 +4,11 @@ import { servicios } from "@/content/servicios";
 import { marcas } from "@/content/marcas";
 import { horariosAgrupados } from "@/lib/horarios";
 import { Icono } from "./Icono";
-import { Llama } from "./Llama";
 
 /** Pie: nombre, dirección y teléfono idénticos en todas las páginas (NAP). */
 export function Pie() {
   return (
     <footer className="relative mt-24 overflow-hidden border-t border-linea bg-[#030816] pb-28 pt-16 md:pb-16">
-      <Llama className="pointer-events-none absolute -right-24 -top-10 h-[26rem] w-auto opacity-[0.06]" circulo={false} modo="quieta" />
       <div className="relative mx-auto grid max-w-6xl gap-12 px-5 md:grid-cols-[1.3fr_1fr_1fr] md:px-6">
         <div>
           <img src="/brand/gesetec-logo.svg" alt={negocio.nombre} width={658} height={205} loading="lazy" className="h-14 w-auto" />

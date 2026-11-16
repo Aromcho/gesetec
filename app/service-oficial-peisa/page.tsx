@@ -41,12 +41,12 @@ export default function ServicePeisa() {
         mensajeWhatsApp="Hola Gesetec, necesito service para mi caldera PEISA."
         aparte={
           <div className="relative mx-auto w-full max-w-sm">
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white p-8 shadow-[0_30px_80px_-30px_rgb(227_50_42/0.6)]">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white p-8 shadow-[0_30px_80px_-30px_rgb(227_50_42/0.6)]">
               <img src={peisa.logo.src} alt="PEISA" width={peisa.logo.ancho} height={peisa.logo.alto} className="mx-auto h-auto w-4/5" />
               <p className="mt-5 text-center text-sm font-semibold uppercase tracking-[0.2em] text-[#9B1C24]">Service oficial</p>
               <p className="mt-1 text-center text-sm text-[#40475a]">Villa Gesell · Cariló · Pinamar · Costa Esmeralda</p>
             </div>
-            <Llama className="absolute -bottom-8 -right-2 h-24 w-auto drop-shadow-2xl md:-right-6" modo="viva" />
+            <Llama className="absolute -bottom-8 -right-2 h-24 w-auto drop-shadow-2xl md:-right-6" modo="quieta" />
           </div>
         }
       />
@@ -65,7 +65,7 @@ export default function ServicePeisa() {
           <ul className="grid gap-3 sm:grid-cols-2">
             {paginaPeisa.bloques.map((b, i) => (
               <Aparecer key={b.titulo} como="li" retraso={i * 0.05}>
-                <div className="h-full rounded-3xl border border-linea bg-marino/70 p-6">
+                <div className="h-full rounded-2xl border border-linea bg-marino/70 p-6">
                   <h3 className="titular-medio text-xl">{b.titulo}</h3>
                   <p className="mt-3 text-[0.97rem] leading-relaxed text-celeste">{b.texto}</p>
                 </div>
@@ -83,7 +83,7 @@ export default function ServicePeisa() {
         <ol className="mt-8 grid gap-3 md:grid-cols-4">
           {paginaPeisa.pasos.map((p, i) => (
             <Aparecer key={p.titulo} como="li" retraso={i * 0.07}>
-              <div className="relative h-full overflow-hidden rounded-3xl border border-linea bg-marino/60 p-6">
+              <div className="relative h-full overflow-hidden rounded-2xl border border-linea bg-marino/60 p-6">
                 <span className="titular block text-5xl text-white/10">{i + 1}</span>
                 <h3 className="mt-2 text-lg font-bold">{p.titulo}</h3>
                 <p className="mt-2 text-[0.95rem] leading-relaxed text-celeste">{p.texto}</p>
@@ -105,7 +105,7 @@ export default function ServicePeisa() {
         />
         <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {equiposPeisa.map((e) => (
-            <li key={e.id} className="flex flex-col overflow-hidden rounded-3xl border border-linea bg-marino/70">
+            <li key={e.id} className="flex flex-col overflow-hidden rounded-2xl border border-linea bg-marino/70">
               {e.foto ? (
                 <div className="aspect-[16/11] overflow-hidden">
                   <Foto nombre={e.foto} alt={`PEISA ${e.modelo} instalado por Gesetec en la costa`} sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 92vw" />
@@ -130,7 +130,7 @@ export default function ServicePeisa() {
             </li>
           ))}
         </ul>
-        <JsonLd datos={equiposPeisa.map(productoSchema)} />
+        <JsonLd datos={equiposPeisa.map(productoSchema).filter((d) => d !== null)} />
       </section>
 
       <div className="mt-24 md:mt-28">
