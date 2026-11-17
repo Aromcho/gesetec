@@ -2,7 +2,7 @@ import Link from "next/link";
 import { marcas, peisa } from "@/content/marcas";
 import { Aparecer } from "../Aparecer";
 
-/** Tira de marcas: PEISA primero y más grande; todas con su logo oficial en sus colores (placa blanca si el logo es para fondo claro). */
+/** Tira de marcas: PEISA primero y más grande, en blanco sobre su rojo; el resto con su logo oficial sobre el azul del sitio. */
 export function TiraMarcas() {
   return (
     <section aria-labelledby="marcas-titulo" className="mx-auto max-w-6xl px-5 md:px-6">
@@ -13,16 +13,16 @@ export function TiraMarcas() {
         <Aparecer>
           <Link
             href="/service-oficial-peisa"
-            className="group relative flex h-full min-h-36 flex-col items-center justify-center gap-3 overflow-hidden rounded-2xl bg-white px-6 py-7 shadow-[0_20px_60px_-25px_rgb(227_50_42/0.55)] transition duration-500 hover:-translate-y-0.5"
+            className="group relative flex h-full min-h-36 flex-col items-center justify-center gap-3 overflow-hidden rounded-2xl bg-[#E10600] px-6 py-7 shadow-[0_20px_60px_-25px_rgb(225_6_0/0.6)] transition duration-500 hover:-translate-y-0.5"
           >
             <img
               src={peisa.logo.src}
               alt="PEISA – service oficial"
               width={peisa.logo.ancho}
               height={peisa.logo.alto}
-              className="h-auto w-[78%] max-w-[300px]"
+              className="h-auto w-[78%] max-w-[300px] [filter:brightness(0)_invert(1)]"
             />
-            <span className="etiqueta flex items-center gap-1.5 text-[#9B1C24]">
+            <span className="etiqueta flex items-center gap-1.5 text-white/85">
               Service oficial · ver más
               <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span>
             </span>
@@ -35,7 +35,7 @@ export function TiraMarcas() {
                 href={`/marcas/${m.slug}`}
                 className="group flex h-full min-h-28 flex-col overflow-hidden rounded-2xl border border-linea bg-marino/70 transition duration-300 hover:border-celeste/40 hover:bg-marino"
               >
-                <span className={`flex flex-1 items-center justify-center px-4 py-4 ${m.logo?.fondo === "claro" ? "bg-white" : ""}`}>
+                <span className="flex flex-1 items-center justify-center px-4 py-4">
                   {m.logo ? (
                     <img
                       src={m.logo.src}

@@ -2,9 +2,9 @@
  * MARCAS — tira de logos de la portada y páginas /marcas/[slug].
  *
  * PEISA es la marca principal y tiene su propia página: /service-oficial-peisa.
- * Logos: public/marcas/ — los oficiales de cada marca, con sus colores reales (tomados de sus sitios).
- * `fondo: "claro"` = el logo está pensado para fondo blanco (Baxi, Rinnai): se muestra sobre una placa blanca.
- * `fondo: "oscuro"` = versión para fondo oscuro (Tameco, Ferroli, Euterma, Bowman, Rowa): va sobre el azul del sitio.
+ * Logos: public/marcas/ — los oficiales de cada marca (tomados de sus sitios), todos sobre el azul del sitio.
+ * Cada uno con sus colores reales; Baxi va en blanco porque su azul se pierde sobre el fondo (pedido de Leo).
+ * PEISA va en blanco sobre su rojo (#E10600) en la tira de marcas.
  * Orden confirmado por el cliente: PEISA, Baxi, Tameco, Ferroli, Euterma, Rinnai, Bowman, Rowa.
  */
 
@@ -12,7 +12,7 @@ export interface Marca {
   slug: string;
   nombre: string;
   /** Logo oficial en sus colores (ruta en /public). Null = se muestra el nombre en texto. */
-  logo: { src: string; ancho: number; alto: number; fondo: "claro" | "oscuro" } | null;
+  logo: { src: string; ancho: number; alto: number } | null;
   /** Qué hace Gesetec con esta marca, en una línea (tira de marcas y tarjetas). */
   rol: string;
   /** Título de la página (≤ 60 caracteres). */
@@ -44,7 +44,7 @@ export const marcas: Marca[] = [
   {
     slug: "baxi",
     nombre: "Baxi",
-    logo: { src: "/marcas/baxi.svg", ancho: 91, alto: 28, fondo: "claro" },
+    logo: { src: "/marcas/baxi.svg", ancho: 91, alto: 28 },
     rol: "Service oficial de calderas Baxi",
     seoTitulo: "Service oficial Baxi en Villa Gesell | Gesetec Calderas",
     seoDescripcion:
@@ -72,7 +72,7 @@ export const marcas: Marca[] = [
   {
     slug: "tameco",
     nombre: "Tameco",
-    logo: { src: "/marcas/tameco.png", ancho: 395, alto: 75, fondo: "oscuro" },
+    logo: { src: "/marcas/tameco.png", ancho: 395, alto: 75 },
     rol: "Service oficial · climatizadores de piscinas y spa",
     seoTitulo: "Tameco en Villa Gesell: climatizadores de piscina | Gesetec",
     seoDescripcion:
@@ -105,7 +105,7 @@ export const marcas: Marca[] = [
   {
     slug: "ferroli",
     nombre: "Ferroli",
-    logo: { src: "/marcas/ferroli.svg", ancho: 112, alto: 56, fondo: "oscuro" },
+    logo: { src: "/marcas/ferroli.svg", ancho: 112, alto: 56 },
     rol: "Service oficial de calderas Ferroli",
     seoTitulo: "Service oficial Ferroli en Villa Gesell | Gesetec Calderas",
     seoDescripcion:
@@ -131,7 +131,7 @@ export const marcas: Marca[] = [
   {
     slug: "euterma",
     nombre: "Euterma",
-    logo: { src: "/marcas/euterma.svg", ancho: 1090, alto: 178, fondo: "oscuro" },
+    logo: { src: "/marcas/euterma.svg", ancho: 1090, alto: 178 },
     rol: "Service oficial de calderas Euterma",
     seoTitulo: "Service oficial Euterma en Villa Gesell | Gesetec Calderas",
     seoDescripcion:
@@ -152,7 +152,7 @@ export const marcas: Marca[] = [
   {
     slug: "rinnai",
     nombre: "Rinnai",
-    logo: { src: "/marcas/rinnai.svg", ancho: 310, alto: 75, fondo: "claro" },
+    logo: { src: "/marcas/rinnai.svg", ancho: 310, alto: 75 },
     rol: "Calefones y agua caliente Rinnai",
     seoTitulo: "Rinnai en Villa Gesell: calefones y service | Gesetec",
     seoDescripcion:
@@ -178,7 +178,7 @@ export const marcas: Marca[] = [
   {
     slug: "bowman",
     nombre: "Bowman",
-    logo: { src: "/marcas/bowman.png", ancho: 360, alto: 78, fondo: "oscuro" },
+    logo: { src: "/marcas/bowman.png", ancho: 360, alto: 78 },
     rol: "Service oficial · intercambiadores de calor",
     seoTitulo: "Intercambiadores Bowman en Villa Gesell | Gesetec Calderas",
     seoDescripcion:
@@ -204,7 +204,7 @@ export const marcas: Marca[] = [
   {
     slug: "rowa",
     nombre: "Rowa",
-    logo: { src: "/marcas/rowa.svg", ancho: 125, alto: 49, fondo: "oscuro" },
+    logo: { src: "/marcas/rowa.svg", ancho: 125, alto: 49 },
     rol: "Servicio técnico de bombas presurizadoras",
     seoTitulo: "Bombas Rowa en Villa Gesell: service y presurización",
     seoDescripcion:
