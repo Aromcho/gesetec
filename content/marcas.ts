@@ -2,16 +2,17 @@
  * MARCAS — tira de logos de la portada y páginas /marcas/[slug].
  *
  * PEISA es la marca principal y tiene su propia página: /service-oficial-peisa.
- * Logos: public/marcas/*.svg (vectorizados de las piezas oficiales que publica Gesetec, sin deformar).
+ * Logos: public/marcas/ — los oficiales de cada marca, con sus colores reales (tomados de sus sitios).
+ * `fondo: "claro"` = el logo está pensado para fondo blanco (Baxi, Rinnai): se muestra sobre una placa blanca.
+ * `fondo: "oscuro"` = versión para fondo oscuro (Tameco, Ferroli, Euterma, Bowman, Rowa): va sobre el azul del sitio.
  * Orden confirmado por el cliente: PEISA, Baxi, Tameco, Ferroli, Euterma, Rinnai, Bowman, Rowa.
- * Bowman no tiene logo en el material del cliente: se muestra su nombre en texto.
  */
 
 export interface Marca {
   slug: string;
   nombre: string;
-  /** Logo blanco para fondos oscuros (ruta en /public). Null = se muestra el nombre en texto. */
-  logo: { src: string; ancho: number; alto: number } | null;
+  /** Logo oficial en sus colores (ruta en /public). Null = se muestra el nombre en texto. */
+  logo: { src: string; ancho: number; alto: number; fondo: "claro" | "oscuro" } | null;
   /** Qué hace Gesetec con esta marca, en una línea (tira de marcas y tarjetas). */
   rol: string;
   /** Título de la página (≤ 60 caracteres). */
@@ -43,7 +44,7 @@ export const marcas: Marca[] = [
   {
     slug: "baxi",
     nombre: "Baxi",
-    logo: { src: "/marcas/baxi-blanco.svg", ancho: 342, alto: 106 },
+    logo: { src: "/marcas/baxi.svg", ancho: 91, alto: 28, fondo: "claro" },
     rol: "Service oficial de calderas Baxi",
     seoTitulo: "Service oficial Baxi en Villa Gesell | Gesetec Calderas",
     seoDescripcion:
@@ -71,7 +72,7 @@ export const marcas: Marca[] = [
   {
     slug: "tameco",
     nombre: "Tameco",
-    logo: { src: "/marcas/tameco-blanco.svg", ancho: 199, alto: 32 },
+    logo: { src: "/marcas/tameco.png", ancho: 395, alto: 75, fondo: "oscuro" },
     rol: "Service oficial · climatizadores de piscinas y spa",
     seoTitulo: "Tameco en Villa Gesell: climatizadores de piscina | Gesetec",
     seoDescripcion:
@@ -104,7 +105,7 @@ export const marcas: Marca[] = [
   {
     slug: "ferroli",
     nombre: "Ferroli",
-    logo: { src: "/marcas/ferroli-blanco.svg", ancho: 155, alto: 78 },
+    logo: { src: "/marcas/ferroli.svg", ancho: 112, alto: 56, fondo: "oscuro" },
     rol: "Service oficial de calderas Ferroli",
     seoTitulo: "Service oficial Ferroli en Villa Gesell | Gesetec Calderas",
     seoDescripcion:
@@ -130,7 +131,7 @@ export const marcas: Marca[] = [
   {
     slug: "euterma",
     nombre: "Euterma",
-    logo: { src: "/marcas/euterma-blanco.svg", ancho: 243, alto: 43 },
+    logo: { src: "/marcas/euterma.svg", ancho: 1090, alto: 178, fondo: "oscuro" },
     rol: "Service oficial de calderas Euterma",
     seoTitulo: "Service oficial Euterma en Villa Gesell | Gesetec Calderas",
     seoDescripcion:
@@ -151,7 +152,7 @@ export const marcas: Marca[] = [
   {
     slug: "rinnai",
     nombre: "Rinnai",
-    logo: { src: "/marcas/rinnai-blanco.svg", ancho: 211, alto: 51 },
+    logo: { src: "/marcas/rinnai.svg", ancho: 310, alto: 75, fondo: "claro" },
     rol: "Calefones y agua caliente Rinnai",
     seoTitulo: "Rinnai en Villa Gesell: calefones y service | Gesetec",
     seoDescripcion:
@@ -177,7 +178,7 @@ export const marcas: Marca[] = [
   {
     slug: "bowman",
     nombre: "Bowman",
-    logo: null,
+    logo: { src: "/marcas/bowman.png", ancho: 360, alto: 78, fondo: "oscuro" },
     rol: "Service oficial · intercambiadores de calor",
     seoTitulo: "Intercambiadores Bowman en Villa Gesell | Gesetec Calderas",
     seoDescripcion:
@@ -203,7 +204,7 @@ export const marcas: Marca[] = [
   {
     slug: "rowa",
     nombre: "Rowa",
-    logo: { src: "/marcas/rowa-blanco.svg", ancho: 159, alto: 62 },
+    logo: { src: "/marcas/rowa.svg", ancho: 125, alto: 49, fondo: "oscuro" },
     rol: "Servicio técnico de bombas presurizadoras",
     seoTitulo: "Bombas Rowa en Villa Gesell: service y presurización",
     seoDescripcion:

@@ -3,7 +3,6 @@ import { negocio, linkWhatsApp } from "@/content/negocio";
 import { peisa } from "@/content/marcas";
 import { AbiertoAhora } from "../AbiertoAhora";
 import { BotonPedido } from "../BotonPedido";
-import { Foto } from "../Foto";
 import { LlamaPortada } from "../LlamaPortada";
 import { Icono } from "../Icono";
 
@@ -66,20 +65,12 @@ export function Portada() {
           </div>
         </div>
 
-        {/* Foto real: en el celular, debajo de los botones */}
-        <figure className="relative lg:col-start-2 lg:row-span-2 lg:row-start-1">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-linea bg-marino sm:aspect-[16/10] lg:aspect-[4/5]">
-            <Foto
-              nombre="service-caldera-mural-abierta-villa-gesell"
-              alt="Técnico de Gesetec haciendo el service de una caldera mural abierta en Villa Gesell"
-              sizes="(min-width: 1024px) 34vw, 92vw"
-              prioridad
-            />
-          </div>
-          <span aria-hidden="true" className="absolute -bottom-px left-6 right-6 h-[3px] rounded-full bg-rojo" />
-        </figure>
+        {/* Escritorio: el logo (llama con el sello) a la derecha. En el celular va de fondo, detrás del título. */}
+        <div aria-hidden="true" className="hidden lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:flex lg:justify-center">
+          <LlamaPortada className="h-[34rem] w-[30rem]" />
+        </div>
 
-        <ul className="flex flex-wrap gap-x-6 gap-y-3 border-t border-linea pt-6 text-sm text-celeste lg:col-start-1 lg:row-start-2 lg:self-start lg:border-t-0 lg:pt-0">
+        <ul className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-celeste lg:col-start-1 lg:row-start-2 lg:self-start">
           <li className="flex items-center gap-2">
             <span className="flex text-[#f7b733]" aria-hidden="true">
               {Array.from({ length: 5 }).map((_, i) => (

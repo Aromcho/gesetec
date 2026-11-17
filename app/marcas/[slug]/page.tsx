@@ -45,7 +45,11 @@ export default async function PaginaMarca({ params }: { params: Promise<{ slug: 
         pedido={{ marca: m.nombre }}
         mensajeWhatsApp={`Hola Gesetec, necesito service para mi equipo ${m.nombre}.`}
         aparte={
-          <div className="mx-auto grid aspect-[4/3] w-full max-w-sm place-items-center rounded-2xl border border-linea bg-[radial-gradient(circle_at_50%_40%,#12234a,#0b1a38_70%)] p-10">
+          <div
+            className={`mx-auto grid aspect-[4/3] w-full max-w-sm place-items-center rounded-2xl border p-10 ${
+              m.logo?.fondo === "claro" ? "border-white bg-white" : "border-linea bg-[radial-gradient(circle_at_50%_40%,#12234a,#0b1a38_70%)]"
+            }`}
+          >
             {m.logo ? (
               <img src={m.logo.src} alt={m.nombre} width={m.logo.ancho} height={m.logo.alto} className="h-auto max-h-24 w-auto max-w-[80%]" />
             ) : (

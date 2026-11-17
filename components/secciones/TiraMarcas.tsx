@@ -2,7 +2,7 @@ import Link from "next/link";
 import { marcas, peisa } from "@/content/marcas";
 import { Aparecer } from "../Aparecer";
 
-/** Tira de marcas: PEISA primero y más grande (logo oficial en color), el resto en blanco. */
+/** Tira de marcas: PEISA primero y más grande; todas con su logo oficial en sus colores (placa blanca si el logo es para fondo claro). */
 export function TiraMarcas() {
   return (
     <section aria-labelledby="marcas-titulo" className="mx-auto max-w-6xl px-5 md:px-6">
@@ -33,23 +33,23 @@ export function TiraMarcas() {
             <Aparecer key={m.slug} como="li" retraso={0.04 * i} className="odd:last:col-span-2">
               <Link
                 href={`/marcas/${m.slug}`}
-                className="group flex h-full min-h-24 flex-col items-center justify-center gap-2 rounded-2xl border border-linea bg-marino/70 px-4 py-4 transition duration-300 hover:border-celeste/40 hover:bg-marino"
+                className="group flex h-full min-h-28 flex-col overflow-hidden rounded-2xl border border-linea bg-marino/70 transition duration-300 hover:border-celeste/40 hover:bg-marino"
               >
-                {m.logo ? (
-                  <img
-                    src={m.logo.src}
-                    alt={m.nombre}
-                    width={m.logo.ancho}
-                    height={m.logo.alto}
-                    loading="lazy"
-                    className="h-auto max-h-10 w-auto max-w-[78%] opacity-85 transition group-hover:opacity-100"
-                  />
-                ) : (
-                  <span className="text-[1.35rem] font-black tracking-[0.12em] text-white/85 [font-stretch:115%] group-hover:text-white">
-                    {m.nombre.toUpperCase()}
-                  </span>
-                )}
-                <span className="text-center text-[0.7rem] leading-tight text-humo">{m.rol}</span>
+                <span className={`flex flex-1 items-center justify-center px-4 py-4 ${m.logo?.fondo === "claro" ? "bg-white" : ""}`}>
+                  {m.logo ? (
+                    <img
+                      src={m.logo.src}
+                      alt={m.nombre}
+                      width={m.logo.ancho}
+                      height={m.logo.alto}
+                      loading="lazy"
+                      className="h-auto max-h-10 w-auto max-w-[84%] transition duration-300 group-hover:scale-105"
+                    />
+                  ) : (
+                    <span className="text-[1.35rem] font-black tracking-[0.12em] text-white [font-stretch:115%]">{m.nombre.toUpperCase()}</span>
+                  )}
+                </span>
+                <span className="px-3 pb-3 pt-2 text-center text-[0.7rem] leading-tight text-humo">{m.rol}</span>
               </Link>
             </Aparecer>
           ))}
