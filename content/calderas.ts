@@ -114,13 +114,13 @@ export const equipos: Equipo[] = [
     instagram: "https://www.instagram.com/reel/C840nFTJOLt/",
   },
   {
-    id: "peisa-tx",
+    id: "peisa-tw",
     marca: "PEISA",
-    modelo: "TX",
+    modelo: "TW 40 y TW 70",
     categoria: "Climatizador de piscina",
     descripcion:
-      "Climatizador de piscina a gas, de calentamiento directo. Según PEISA, usa la misma bomba de la pileta, es apto para la intemperie y tiene encendido electrónico sin llama piloto.",
-    datos: ["Calentamiento directo", "A gas", "Apto para la intemperie"],
+      "Climatizadores de piscina a gas, de calentamiento directo, para espejos de agua de 40 m² o 70 m². Según PEISA, funcionan con la misma bomba de la pileta y tienen encendido electrónico sin llama piloto y válvula bypass automática.",
+    datos: ["Calentamiento directo", "A gas", "40 m² o 70 m²"],
   },
   {
     id: "tameco-cp-30",
