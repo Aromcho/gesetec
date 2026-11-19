@@ -111,13 +111,13 @@ export const faqs: Faq[] = [
     id: "piscina-potencia",
     pregunta: "¿Qué climatizador necesito para mi piscina?",
     respuesta:
-      "Depende del volumen de agua, de si la piscina está al aire libre o cubierta y de cuántos meses la quieras usar. Como referencia, según Tameco: el CP-30 es para piletas de hasta 45.000 litros, el CP-70 hasta 100.000, el CP-80 hasta 130.000 y el CP-100 hasta 200.000. Pasanos las medidas y te asesoramos.",
+      "Depende del volumen de agua, de si la piscina está al aire libre o cubierta y de cuántos meses la quieras usar. Como referencia, según Tameco: el CP-30 es para piletas de hasta 45.000 litros, el CP-70 hasta 100.000, el CP-80 hasta 130.000 y el CP-100 hasta 200.000. Si preferís calentamiento directo, también trabajamos los climatizadores a gas PEISA TX. Pasanos las medidas y te asesoramos.",
   },
   {
     id: "piscina-directo-indirecto",
     pregunta: "¿Qué diferencia hay entre un climatizador de piscina de calentamiento directo y uno indirecto?",
     respuesta:
-      "En uno de calentamiento directo, el agua de la pileta pasa por el intercambiador que calienta el quemador. Los Tameco son de calentamiento indirecto, «a baño María»: la llama calienta un circuito de agua aparte, que el termostato no deja pasar de 85 °C, y el agua de la pileta circula por un intercambiador de cobre sumergido en ese circuito, sin contacto con la llama ni con los gases. Según Tameco, así las incrustaciones que deja el agua de la pileta son mínimas y el equipo depende menos del caudal de la bomba.",
+      "En uno de calentamiento directo, el agua de la pileta pasa por el intercambiador que calienta el quemador. Los Tameco son de calentamiento indirecto, «a baño María»: la llama calienta un circuito de agua aparte, que el termostato no deja pasar de 85 °C, y el agua de la pileta circula por un intercambiador de cobre sumergido en ese circuito, sin contacto con la llama ni con los gases. Según Tameco, así las incrustaciones que deja el agua de la pileta son mínimas y el equipo depende menos del caudal de la bomba. Trabajamos las dos opciones: los Tameco, de calentamiento indirecto, y los climatizadores a gas PEISA TX, de calentamiento directo. Pasanos las medidas de tu pileta y te ayudamos a elegir.",
     portada: true,
   },
   {

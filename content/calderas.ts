@@ -114,6 +114,15 @@ export const equipos: Equipo[] = [
     instagram: "https://www.instagram.com/reel/C840nFTJOLt/",
   },
   {
+    id: "peisa-tx",
+    marca: "PEISA",
+    modelo: "TX",
+    categoria: "Climatizador de piscina",
+    descripcion:
+      "Climatizador de piscina a gas, de calentamiento directo. Según PEISA, usa la misma bomba de la pileta, es apto para la intemperie y tiene encendido electrónico sin llama piloto.",
+    datos: ["Calentamiento directo", "A gas", "Apto para la intemperie"],
+  },
+  {
     id: "tameco-cp-30",
     marca: "Tameco",
     modelo: "CP-30",

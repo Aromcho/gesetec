@@ -272,22 +272,23 @@ export const servicios: Servicio[] = [
   {
     slug: "climatizacion-de-piscinas",
     nombre: "Climatización de piscinas",
-    resumen: "Climatizadores Tameco e intercambiadores Bowman: tu pileta a la temperatura ideal más meses al año.",
+    resumen: "Climatizadores Tameco y PEISA e intercambiadores Bowman: tu pileta a la temperatura ideal más meses al año.",
     icono: "piscina",
     seoTitulo: "Climatización de piscinas en Villa Gesell | Tameco oficial",
     seoDescripcion:
-      "Climatizadores de piscina Tameco CP-30 a CP-100, de calentamiento indirecto: venta, instalación en el día y service oficial en Villa Gesell, Pinamar, Cariló y Costa Esmeralda.",
+      "Climatizadores de piscina Tameco CP-30 a CP-100 (calentamiento indirecto) y PEISA TX (calentamiento directo): venta, instalación y service oficial en Villa Gesell, Pinamar, Cariló y Costa Esmeralda.",
     h1: "Climatización de piscinas en Villa Gesell y la costa",
-    bajada: "Venta, instalación y service oficial de climatizadores Tameco. Tu piscina lista para usar en un solo día.",
+    bajada: "Venta, instalación y service oficial de climatizadores Tameco y PEISA. Tu piscina lista para usar en un solo día.",
     parrafos: [
       "Una piscina climatizada se disfruta muchos más meses. En la costa, donde las noches son frescas incluso en verano, la diferencia se nota desde el primer día.",
       "Somos service oficial Tameco. Vendemos e instalamos los climatizadores CP-30 (30.000 kcal/h), CP-70 (70.000 kcal/h), CP-80 (80.000 kcal/h) y CP-100 (98.500 kcal/h), y te ayudamos a elegir según el volumen de tu piscina y el uso que le des. Armamos la base de cemento, hacemos la instalación y la puesta en marcha, en muchos casos en un solo día.",
       "Los climatizadores Tameco son de calentamiento indirecto, «a baño María»: la llama calienta un circuito de agua aparte, que el termostato no deja pasar de 85 °C, y el agua de la pileta circula por un intercambiador de cobre sumergido en ese circuito, sin contacto con la llama ni con los gases. Según Tameco, así las incrustaciones que deja el agua de la pileta son mínimas y el equipo depende menos del caudal de la bomba. En un climatizador de calentamiento directo, en cambio, el agua de la pileta pasa por el intercambiador que calienta el quemador.",
+      "Si preferís calentamiento directo, también vendemos e instalamos los climatizadores a gas PEISA TX: según PEISA, usan la misma bomba de la pileta, son aptos para la intemperie y tienen encendido electrónico sin llama piloto.",
       "Para hoteles o casas que ya tienen calefacción central, otra opción es climatizar la piscina con la caldera mediante un intercambiador de calor Bowman. También hacemos proyectos que combinan calefacción y pileta con un solo sistema.",
     ],
     incluye: [
       "Asesoramiento para elegir la potencia",
-      "Venta de equipos Tameco originales",
+      "Venta de equipos Tameco y PEISA originales",
       "Envío bonificado de los equipos que vendemos",
       "Base de cemento e instalación",
       "Puesta en marcha y service oficial",
@@ -296,6 +297,7 @@ export const servicios: Servicio[] = [
       titulo: "Opciones",
       items: [
         "Climatizador Tameco a gas, de calentamiento indirecto",
+        "Climatizador PEISA TX a gas, de calentamiento directo",
         "Intercambiador Bowman vinculado a la caldera",
         "Proyecto integral: calefacción + piscina",
         "Climatización de spa",

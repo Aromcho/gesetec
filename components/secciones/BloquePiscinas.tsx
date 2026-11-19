@@ -5,10 +5,10 @@ import { Icono } from "../Icono";
 import { BotonPedido } from "../BotonPedido";
 
 const PUNTOS = [
-  "Service oficial Tameco",
+  "Service oficial Tameco y PEISA",
   "Instalación y puesta en marcha, muchas veces en un solo día",
   "Base de cemento, instalación y envío bonificado",
-  "Calentamiento indirecto, «a baño María»",
+  "Indirecto «a baño María» (Tameco) o directo (PEISA TX)",
 ];
 
 /** Bloque destacado de climatización de piscinas: una de las principales líneas de trabajo de Gesetec. */
@@ -37,9 +37,9 @@ export function BloquePiscinas({ fondo = "piscina-climatizada-costa-esmeralda" }
               Tu pileta a la temperatura ideal, más meses al año
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/85">
-              Vendemos, instalamos y hacemos el service oficial de climatizadores Tameco para piscinas y spa en Villa Gesell, Cariló, Pinamar y
+              Vendemos, instalamos y hacemos el service oficial de climatizadores Tameco y PEISA para piscinas y spa en Villa Gesell, Cariló, Pinamar y
               Costa Esmeralda. Los Tameco calientan «a baño María»: el agua de tu pileta se calienta sin contacto con la llama y, según el fabricante, eso
-              reduce el sarro. También climatizamos piscinas con la caldera de la casa o del hotel, con intercambiadores Bowman.
+              reduce el sarro. Si preferís calentamiento directo, también trabajamos los climatizadores a gas PEISA TX. Y climatizamos piscinas con la caldera de la casa o del hotel, con intercambiadores Bowman.
             </p>
           </div>
           <ul className="grid gap-3 sm:grid-cols-2">
