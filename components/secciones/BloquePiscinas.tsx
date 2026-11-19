@@ -7,8 +7,8 @@ import { BotonPedido } from "../BotonPedido";
 const PUNTOS = [
   "Service oficial Tameco",
   "Instalación y puesta en marcha, muchas veces en un solo día",
-  "Base de cemento e instalación completa",
-  "Logística a domicilio bonificada (según zona)",
+  "Base de cemento, instalación y envío bonificado",
+  "Calentamiento indirecto, «a baño María»",
 ];
 
 /** Bloque destacado de climatización de piscinas: una de las principales líneas de trabajo de Gesetec. */
@@ -38,7 +38,8 @@ export function BloquePiscinas({ fondo = "piscina-climatizada-costa-esmeralda" }
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/85">
               Vendemos, instalamos y hacemos el service oficial de climatizadores Tameco para piscinas y spa en Villa Gesell, Cariló, Pinamar y
-              Costa Esmeralda. También climatizamos piscinas con la caldera de la casa o del hotel, con intercambiadores Bowman.
+              Costa Esmeralda. Los Tameco calientan «a baño María»: el agua de tu pileta se calienta sin contacto con la llama y, según el fabricante, eso
+              reduce el sarro. También climatizamos piscinas con la caldera de la casa o del hotel, con intercambiadores Bowman.
             </p>
           </div>
           <ul className="grid gap-3 sm:grid-cols-2">

@@ -79,16 +79,17 @@ export const marcas: Marca[] = [
       "Venta, instalación y service oficial de climatizadores de piscina Tameco CP-30, CP-70, CP-80 y CP-100 en Villa Gesell, Pinamar, Cariló y Costa Esmeralda.",
     h1: "Climatizadores de piscina Tameco: venta, instalación y service oficial",
     bajada:
-      "Somos service oficial Tameco en la costa. Vendemos, instalamos y ponemos en marcha calderas para piscinas y spa.",
+      "Somos service oficial Tameco en la costa. Vendemos, instalamos y ponemos en marcha sus climatizadores de calentamiento indirecto, «a baño María», para piscinas y spa.",
     parrafos: [
       "Tameco fabrica en Argentina calderas pensadas para climatizar piscinas y spa. Son equipos robustos, con gabinete protegido contra la corrosión y la intemperie, que se pueden instalar al aire libre o en una sala de máquinas. En la costa, donde el aire salino ataca todo lo metálico, eso hace la diferencia.",
+      "Los climatizadores Tameco son de calentamiento indirecto, «a baño María»: la llama calienta un circuito de agua aparte, que el termostato no deja pasar de 85 °C, y el agua de la pileta circula por un intercambiador de cobre sumergido en ese circuito, sin contacto con la llama ni con los gases. Según Tameco, así las incrustaciones que deja el agua de la pileta son mínimas y el equipo depende menos del caudal de la bomba. En un climatizador de calentamiento directo, en cambio, el agua de la pileta pasa por el intercambiador que calienta el quemador.",
       "En Gesetec hacemos el proyecto completo: te ayudamos a elegir la potencia según el volumen de tu piscina y el uso que le vas a dar, coordinamos la entrega, armamos la base de cemento, hacemos la instalación hidráulica y de gas, y dejamos el equipo funcionando. En muchos casos la pileta queda lista para usar en un solo día.",
       "Como service oficial Tameco, también hacemos el mantenimiento y la reparación de equipos ya instalados, con repuestos originales.",
     ],
     servicios: [
       "Asesoramiento para elegir la potencia",
       "Venta de equipos originales",
-      "Logística a domicilio (bonificada en productos seleccionados)",
+      "Envío bonificado de los equipos que vendemos",
       "Base de cemento, instalación y puesta en marcha",
       "Service oficial y repuestos originales",
     ],
@@ -100,7 +101,7 @@ export const marcas: Marca[] = [
     ],
     serviciosRelacionados: ["climatizacion-de-piscinas", "instalacion", "mantenimiento"],
     trabajos: ["tameco-cp30-costa-esmeralda"],
-    faqs: ["piscina-potencia", "piscina-un-dia", "envios", "que-marcas"],
+    faqs: ["piscina-directo-indirecto", "piscina-potencia", "piscina-un-dia", "envios", "que-marcas"],
   },
   {
     slug: "ferroli",
