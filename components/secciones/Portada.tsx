@@ -27,7 +27,7 @@ export function Portada() {
         <div className="lg:col-start-1 lg:row-start-1">
           <AbiertoAhora />
           <h1 id="h1" className="titular mt-5 text-[2.2rem] xs:text-[2.45rem] sm:text-[2.9rem] lg:text-[3.5rem]">
-            Venta y service oficial de calderas en <span className="text-rojo">Villa Gesell</span>
+            Servicio técnico y venta de calderas en <span className="text-rojo">Villa Gesell</span>
           </h1>
           <p className="mt-4 max-w-[60ch] text-[0.9rem] leading-[1.6] text-celeste/85 md:mt-5 md:text-[1.1rem] md:leading-relaxed md:text-celeste">
             Reparación, mantenimiento e instalación de calderas, calefacción central y climatización de piscinas en Villa Gesell, Mar de las
