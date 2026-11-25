@@ -67,7 +67,7 @@ export const servicios: Servicio[] = [
     pedido: "Instalar una caldera nueva",
     fotos: [
       "caldera-peisa-prima-tec-24-dsf-instalada",
-      "caldera-peisa-prima-tec-24-dsf-conexiones",
+      "caldera-peisa-prima-tec-24-dsf-nueva",
       "caldera-peisa-diva-tecno-smart-negra",
     ],
     marcas: ["baxi", "ferroli", "euterma"],
@@ -111,7 +111,7 @@ export const servicios: Servicio[] = [
     fotos: [
       "service-caldera-peisa-diva-tecno-abierta",
       "service-oficial-caldera-peisa-abierta",
-      "service-caldera-mural-abierta-villa-gesell",
+      "service-caldera-peisa-summa-condens-abierta",
     ],
     marcas: ["baxi", "ferroli", "euterma"],
     trabajos: [],
@@ -311,7 +311,7 @@ export const servicios: Servicio[] = [
       "intercambiador-bowman-fc100-piscina-apart-hotel",
     ],
     marcas: ["tameco", "bowman"],
-    trabajos: ["tameco-cp30-costa-esmeralda", "peisa-xp100-bowman-apart-hotel"],
+    trabajos: ["tameco-cp100-la-frontera-pinamar", "tameco-cp30-costa-esmeralda", "tameco-cp70-la-herradura", "peisa-xp100-bowman-apart-hotel"],
     faqs: ["piscina-directo-indirecto", "piscina-potencia", "piscina-un-dia", "envios"],
   },
 ];

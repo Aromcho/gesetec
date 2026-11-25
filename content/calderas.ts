@@ -102,6 +102,7 @@ export const equipos: Equipo[] = [
     descripcion: "Termostato de ambiente Wi-Fi para controlar la calefacción desde una app. Venta, instalación y servicio técnico.",
     datos: ["Wi-Fi", "Control desde el celular"],
     instagram: "https://www.instagram.com/reel/C8Hzs6SM-X3/",
+    foto: "termostato-peisa-zentraly-wifi",
   },
   {
     id: "peisa-calefon-tiro-forzado",
@@ -140,6 +141,7 @@ export const equipos: Equipo[] = [
     descripcion: "Climatizador a gas para piscinas medianas y grandes.",
     datos: ["70.000 kcal/h", "Para piletas de hasta 100.000 litros (según Tameco)"],
     instagram: "https://www.instagram.com/reel/DKcL-YRtVaX/",
+    foto: "climatizador-piscina-tameco-cp-70-la-herradura",
   },
   {
     id: "tameco-cp-80",
@@ -157,6 +159,7 @@ export const equipos: Equipo[] = [
     descripcion: "El climatizador de mayor potencia de la línea, para piscinas grandes.",
     datos: ["98.500 kcal/h", "Para piletas de hasta 200.000 litros (según Tameco)"],
     instagram: "https://www.instagram.com/reel/DTsi199gphg/",
+    foto: "climatizador-piscina-tameco-cp-100-pileta",
   },
   {
     id: "rinnai-serie-comfort",

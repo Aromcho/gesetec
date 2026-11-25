@@ -16,7 +16,7 @@ export interface TrabajoVisor {
   lugar: string;
   descripcion: string;
   equipos: string[];
-  instagram: string;
+  instagram?: string;
   fotos: FotoVisor[];
 }
 
@@ -102,14 +102,16 @@ export function VisorTrabajos({ trabajos, children }: { trabajos: TrabajoVisor[]
                   </li>
                 ))}
               </ul>
-              <a
-                href={actual.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex h-11 items-center gap-2 rounded-full border border-linea px-4 text-sm hover:border-celeste"
-              >
-                <Icono nombre="instagram" className="h-5 w-5" /> Ver el video en Instagram
-              </a>
+              {actual.instagram && (
+                <a
+                  href={actual.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex h-11 items-center gap-2 rounded-full border border-linea px-4 text-sm hover:border-celeste"
+                >
+                  <Icono nombre="instagram" className="h-5 w-5" /> Ver el video en Instagram
+                </a>
+              )}
             </div>
           </div>
         )}

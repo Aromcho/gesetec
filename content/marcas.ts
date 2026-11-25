@@ -100,7 +100,7 @@ export const marcas: Marca[] = [
       "Tameco CP-100 · 98.500 kcal/h · piletas de hasta 200.000 litros",
     ],
     serviciosRelacionados: ["climatizacion-de-piscinas", "instalacion", "mantenimiento"],
-    trabajos: ["tameco-cp30-costa-esmeralda"],
+    trabajos: ["tameco-cp100-la-frontera-pinamar", "tameco-cp30-costa-esmeralda", "tameco-cp70-la-herradura"],
     faqs: ["piscina-directo-indirecto", "piscina-potencia", "piscina-un-dia", "envios", "que-marcas"],
   },
   {

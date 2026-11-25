@@ -85,7 +85,7 @@ export const paginasZona: PaginaZona[] = [
       "Puesta en marcha de casas y departamentos de temporada",
       "Venta e instalación de calderas, radiadores y climatizadores",
     ],
-    foto: "camioneta-gesetec-service-oficial-villa-gesell",
+    foto: "utilitario-gesetec-entre-pinos",
     trabajos: ["prima-tec-24-dsf", "diva-tecno-smart-gamma"],
     resena: "VANESA",
     faqs: [
@@ -251,8 +251,8 @@ export const paginasZona: PaginaZona[] = [
       "Climatización de piscinas",
       "Calderas de alta potencia para hoteles",
     ],
-    foto: "fondo-piscina-climatizada-atardecer-pinos",
-    trabajos: [],
+    foto: "piscina-climatizada-la-frontera-pinamar",
+    trabajos: ["tameco-cp100-la-frontera-pinamar"],
     faqs: [
       {
         pregunta: "¿Atienden La Herradura y los barrios cerrados de Pinamar?",
@@ -335,8 +335,8 @@ export const paginasZona: PaginaZona[] = [
       "Puesta en marcha de temporada",
       "Service oficial PEISA, Baxi, Tameco y más",
     ],
-    foto: "fondo-piscina-climatizada-atardecer-pinos",
-    trabajos: [],
+    foto: "piscina-climatizada-la-herradura-entre-pinos",
+    trabajos: ["tameco-cp70-la-herradura"],
     faqs: [
       {
         pregunta: "¿Trabajan en North Beach y Villa Robles?",

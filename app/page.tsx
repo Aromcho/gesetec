@@ -1,6 +1,6 @@
 import { metaPagina } from "@/lib/seo";
 import { faqs } from "@/content/faqs";
-import { trabajos } from "@/content/trabajos";
+import { getTrabajos } from "@/content/trabajos";
 import { Portada } from "@/components/secciones/Portada";
 import { TiraMarcas } from "@/components/secciones/TiraMarcas";
 import { Servicios } from "@/components/secciones/Servicios";
@@ -20,6 +20,16 @@ export const metadata = metaPagina({
     "Servicio técnico, service y venta de calderas en Villa Gesell. Service oficial Peisa en Mar de las Pampas, Cariló, Pinamar, Costa Esmeralda y Madariaga.",
   ruta: "/",
 });
+
+/** Trabajos de la portada: 6 (la grilla es de 6). El resto aparece en las páginas de servicio, marca y zona. */
+const TRABAJOS_PORTADA = [
+  "tameco-cp100-la-frontera-pinamar",
+  "apart-hotel-carilo",
+  "piso-radiante-prima-tec-32",
+  "tameco-cp30-costa-esmeralda",
+  "tameco-cp70-la-herradura",
+  "prima-tec-24-dsf",
+];
 
 export default function Inicio() {
   return (
@@ -42,7 +52,7 @@ export default function Inicio() {
         <EquiposVenta />
       </div>
       <div className="mt-16 md:mt-24">
-        <Trabajos lista={trabajos} />
+        <Trabajos lista={getTrabajos(TRABAJOS_PORTADA)} />
       </div>
       <Separador className="my-20 md:my-28" />
       <Resenas />

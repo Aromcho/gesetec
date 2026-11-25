@@ -1,6 +1,6 @@
 /**
  * TRABAJOS REALES — galería de la portada y de cada página.
- * Fotos: cuadros tomados de los reels de @gesetec.calderas (assets/fotos). Sin caras ni textos encima.
+ * Fotos: reales, de los álbumes de trabajos que pasa Leo y de los reels de @gesetec.calderas (assets/fotos). Sin caras ni patentes.
  * Para sumar un trabajo: copiá las fotos a assets/fotos/ con un nombre descriptivo
  * (marca-modelo-zona.jpg) y agregá un objeto acá. `npm run build` genera los WebP.
  */
@@ -19,13 +19,27 @@ export interface Trabajo {
   equipos: string[];
   descripcion: string;
   fotos: Foto[];
-  /** Publicación original en Instagram. */
-  instagram: string;
+  /** Publicación original en Instagram (si la hay). */
+  instagram?: string;
   /** Aparece en la página de PEISA. */
   peisa?: boolean;
 }
 
 export const trabajos: Trabajo[] = [
+  {
+    id: "tameco-cp100-la-frontera-pinamar",
+    titulo: "Tameco CP-100 para una pileta grande en La Frontera",
+    lugar: "La Frontera, Pinamar",
+    marcas: ["tameco"],
+    equipos: ["Tameco CP-100 · 98.500 kcal/h"],
+    descripcion:
+      "Venta, traslado e instalación de un climatizador de piscina Tameco CP-100, el de mayor potencia de la línea, para una pileta grande en La Frontera, Pinamar. El equipo quedó protegido dentro de un gabinete de madera, al lado de la pileta.",
+    fotos: [
+      { src: "piscina-climatizada-la-frontera-pinamar", alt: "Pileta con cascadas y deck entre pinos en La Frontera, Pinamar" },
+      { src: "climatizador-piscina-tameco-cp-100-la-frontera-pinamar", alt: "Climatizador Tameco CP-100 dentro de su gabinete de madera en La Frontera, Pinamar" },
+      { src: "gabinete-climatizador-tameco-cp-100-la-frontera-pinamar", alt: "Gabinete de madera abierto con el climatizador Tameco durante la instalación" },
+    ],
+  },
   {
     id: "apart-hotel-carilo",
     titulo: "Calefacción central de un apart hotel de 10 departamentos",
@@ -38,7 +52,8 @@ export const trabajos: Trabajo[] = [
       { src: "radiador-peisa-tropical-500-negro-carilo", alt: "Radiador PEISA Tropical 500 negro instalado en un apart hotel de Cariló" },
       { src: "sala-de-maquinas-calderas-peisa-carilo", alt: "Cañerías de termofusión y válvulas de la sala de máquinas del apart hotel de Cariló" },
       { src: "toallero-peisa-domino-negro-carilo", alt: "Toallero calefaccionado PEISA Dominó negro en un baño de Cariló" },
-      { src: "logistica-equipos-peisa", alt: "Depósito con equipos PEISA embalados para la entrega" },
+      { src: "logistica-equipos-peisa", alt: "Utilitario de Gesetec cargado con radiadores y toalleros PEISA para el apart hotel de Cariló" },
+      { src: "radiador-peisa-blanco-valvula-termostatica-carilo", alt: "Radiador PEISA blanco con válvula termostática en un departamento del apart hotel de Cariló" },
     ],
     instagram: "https://www.instagram.com/reel/DeuwkQVibAc/",
     peisa: true,
@@ -54,8 +69,8 @@ export const trabajos: Trabajo[] = [
     fotos: [
       { src: "serpentinas-piso-radiante-instalacion", alt: "Serpentinas de piso radiante instaladas antes del contrapiso" },
       { src: "caldera-peisa-prima-tec-32-dsf-piso-radiante", alt: "Caldera PEISA Prima Tec 32 DSF nueva para piso radiante" },
-      { src: "colector-piso-radiante-peisa-prima-tec", alt: "Colector de piso radiante con circuitos rojos" },
-      { src: "obra-piso-radiante-entre-pinos", alt: "Obra con piso radiante en una casa entre pinos de la costa" },
+      { src: "colector-piso-radiante-peisa-prima-tec", alt: "Colector de piso radiante con caudalímetros en su gabinete" },
+      { src: "obra-piso-radiante-entre-pinos", alt: "Serpentinas de piso radiante en una casa en obra con ventanales al bosque" },
     ],
     instagram: "https://www.instagram.com/reel/De4MQbBiTut/",
     peisa: true,
@@ -85,9 +100,9 @@ export const trabajos: Trabajo[] = [
     descripcion:
       "Venta, instalación y puesta en marcha de una caldera mural PEISA Prima Tec 24 DSF, de doble servicio y tiro forzado: calefacción y agua caliente sanitaria en un solo equipo.",
     fotos: [
+      { src: "caldera-peisa-prima-tec-24-dsf-nueva", alt: "Caldera PEISA Prima Tec 24 DSF recién instalada, con el cartel de garantía" },
       { src: "caldera-peisa-prima-tec-24-dsf-instalada", alt: "Caldera PEISA Prima Tec 24 DSF instalada con su panel digital" },
-      { src: "caldera-peisa-prima-tec-24-dsf-conexiones", alt: "Conexiones de una caldera PEISA Prima Tec 24 DSF durante la instalación" },
-      { src: "camioneta-gesetec-service-oficial-villa-gesell", alt: "Camioneta de Gesetec Calderas con la caldera PEISA lista para instalar" },
+      { src: "camioneta-gesetec-service-oficial-villa-gesell", alt: "Caldera PEISA en su caja, en la camioneta de Gesetec, lista para instalar" },
     ],
     instagram: "https://www.instagram.com/reel/DT-b7DCArTD/",
     peisa: true,
@@ -102,9 +117,23 @@ export const trabajos: Trabajo[] = [
       "Instalación de un climatizador de piscina Tameco CP-30 en Costa Esmeralda: base de cemento, instalación profesional y puesta en marcha con service oficial Tameco. La pileta quedó lista para usar en un solo día.",
     fotos: [
       { src: "piscina-climatizada-costa-esmeralda", alt: "Piscina climatizada entre pinos en Costa Esmeralda" },
-      { src: "climatizador-piscina-tameco-cp-30-costa-esmeralda", alt: "Climatizador de piscina Tameco CP-30 instalado en Costa Esmeralda" },
+      { src: "climatizador-piscina-tameco-cp-30-costa-esmeralda", alt: "Climatizador de piscina Tameco CP-30 sobre su platea, junto al cerco de palos, en Costa Esmeralda" },
     ],
     instagram: "https://www.instagram.com/reel/DfRxDnhifTs/",
+  },
+  {
+    id: "tameco-cp70-la-herradura",
+    titulo: "Climatizador Tameco CP-70 en La Herradura",
+    lugar: "La Herradura, Pinamar",
+    marcas: ["tameco"],
+    equipos: ["Tameco CP-70 · 70.000 kcal/h"],
+    descripcion:
+      "Instalación de un climatizador de piscina Tameco CP-70 para una pileta entre pinos en el barrio La Herradura, en Pinamar. El equipo quedó al costado de la casa, con las conexiones de agua y de gas a la vista para el service.",
+    fotos: [
+      { src: "climatizador-piscina-tameco-cp-70-la-herradura", alt: "Climatizador de piscina Tameco CP-70 instalado al costado de una casa en La Herradura" },
+      { src: "piscina-climatizada-la-herradura-entre-pinos", alt: "Pileta climatizada entre pinos en el barrio La Herradura, Pinamar" },
+      { src: "climatizador-tameco-cp-70-abierto-la-herradura", alt: "Tameco CP-70 abierto durante la instalación, con la válvula de gas a la vista" },
+    ],
   },
   {
     id: "peisa-xp100-bowman-apart-hotel",
