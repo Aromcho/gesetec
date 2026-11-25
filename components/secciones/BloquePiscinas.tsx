@@ -12,7 +12,7 @@ const PUNTOS = [
 ];
 
 /** Bloque destacado de climatización de piscinas: una de las principales líneas de trabajo de Gesetec. */
-export function BloquePiscinas({ fondo = "piscina-climatizada-costa-esmeralda" }: { fondo?: string }) {
+export function BloquePiscinas({ fondo = "piscina-entre-pinos-pasarela" }: { fondo?: string }) {
   const tameco = equipos.filter((e) => e.marca === "Tameco");
   return (
     <section aria-labelledby="piscinas-titulo" className="relative isolate overflow-hidden">

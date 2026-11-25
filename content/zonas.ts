@@ -120,7 +120,7 @@ export const paginasZona: PaginaZona[] = [
       "Climatización de piscinas con Tameco",
       "Coordinación con dueños, administradores o encargados",
     ],
-    foto: "casa-de-veraneo-entre-pinos-costa-atlantica",
+    foto: "piscina-entre-pinos-pasarela",
     trabajos: [],
     faqs: [
       {
@@ -154,7 +154,7 @@ export const paginasZona: PaginaZona[] = [
       "Reparación con repuestos originales",
       "Climatización de piscinas",
     ],
-    foto: "casa-de-veraneo-entre-pinos-costa-atlantica",
+    foto: "caldera-peisa-camioneta-entre-pinos",
     trabajos: [],
     faqs: [
       {
@@ -222,7 +222,7 @@ export const paginasZona: PaginaZona[] = [
       "Instalación de calderas y calefacción central",
       "Climatización de piscinas",
     ],
-    foto: "living-calido-radiador-calefaccion-central",
+    foto: "sala-de-maquinas-dos-calderas-peisa",
     trabajos: [],
     faqs: [
       {
@@ -284,7 +284,7 @@ export const paginasZona: PaginaZona[] = [
       "Service y reparación con repuestos originales",
       "Coordinación a distancia con el propietario",
     ],
-    foto: "piscina-climatizada-costa-esmeralda",
+    foto: "climatizador-tameco-cp-30-cerco-costa-esmeralda",
     trabajos: ["tameco-cp30-costa-esmeralda"],
     resena: "Jose Maria Ibarbia",
     faqs: [
@@ -363,7 +363,7 @@ export const paginasZona: PaginaZona[] = [
       "Instalación de calderas y radiadores",
       "Visitas coordinadas por WhatsApp",
     ],
-    foto: "living-calido-radiador-calefaccion-central",
+    foto: "radiadores-peisa-ventanal-bosque",
     trabajos: [],
     faqs: [
       {

@@ -47,7 +47,7 @@ export default function Inicio() {
       <div className="mt-24 md:mt-32">
         <BloquePeisa />
       </div>
-      <BloquePiscinas fondo="fondo-piscina-climatizada-atardecer-pinos" />
+      <BloquePiscinas fondo="piscina-entre-pinos-pasarela" />
       <div className="mt-6 md:mt-10">
         <EquiposVenta />
       </div>

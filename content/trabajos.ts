@@ -50,7 +50,6 @@ export const trabajos: Trabajo[] = [
       "Venta, logística e instalación del sistema completo: dos calderas PEISA 32 DSF vinculadas a un boiler acumulador para el agua caliente, radiadores Gamma 500 blancos y Tropical 500 negros, y toalleros Dominó en cada departamento. Puesta a punto y puesta en marcha de todo el sistema.",
     fotos: [
       { src: "radiador-peisa-tropical-500-negro-carilo", alt: "Radiador PEISA Tropical 500 negro instalado en un apart hotel de Cariló" },
-      { src: "sala-de-maquinas-calderas-peisa-carilo", alt: "Cañerías de termofusión y válvulas de la sala de máquinas del apart hotel de Cariló" },
       { src: "toallero-peisa-domino-negro-carilo", alt: "Toallero calefaccionado PEISA Dominó negro en un baño de Cariló" },
       { src: "logistica-equipos-peisa", alt: "Utilitario de Gesetec cargado con radiadores y toalleros PEISA para el apart hotel de Cariló" },
       { src: "radiador-peisa-blanco-valvula-termostatica-carilo", alt: "Radiador PEISA blanco con válvula termostática en un departamento del apart hotel de Cariló" },
@@ -67,7 +66,7 @@ export const trabajos: Trabajo[] = [
     descripcion:
       "Instalación de calefacción por piso radiante en una casa en obra entre pinos, alimentada por una caldera PEISA Prima Tec 32 DSF de doble servicio. Trabajo realizado junto a @osseshns y @hidraulicsupply.",
     fotos: [
-      { src: "serpentinas-piso-radiante-instalacion", alt: "Serpentinas de piso radiante instaladas antes del contrapiso" },
+      { src: "serpentinas-piso-radiante-instalacion", alt: "Serpentinas de piso radiante instaladas antes del contrapiso, con luz de la tarde" },
       { src: "caldera-peisa-prima-tec-32-dsf-piso-radiante", alt: "Caldera PEISA Prima Tec 32 DSF nueva para piso radiante" },
       { src: "colector-piso-radiante-peisa-prima-tec", alt: "Colector de piso radiante con caudalímetros en su gabinete" },
       { src: "obra-piso-radiante-entre-pinos", alt: "Serpentinas de piso radiante en una casa en obra con ventanales al bosque" },
@@ -116,7 +115,7 @@ export const trabajos: Trabajo[] = [
     descripcion:
       "Instalación de un climatizador de piscina Tameco CP-30 en Costa Esmeralda: base de cemento, instalación profesional y puesta en marcha con service oficial Tameco. La pileta quedó lista para usar en un solo día.",
     fotos: [
-      { src: "piscina-climatizada-costa-esmeralda", alt: "Piscina climatizada entre pinos en Costa Esmeralda" },
+      { src: "climatizador-tameco-cp-30-cerco-costa-esmeralda", alt: "Climatizador Tameco CP-30 recién colocado sobre su platea, entre pinos, en Costa Esmeralda" },
       { src: "climatizador-piscina-tameco-cp-30-costa-esmeralda", alt: "Climatizador de piscina Tameco CP-30 sobre su platea, junto al cerco de palos, en Costa Esmeralda" },
     ],
     instagram: "https://www.instagram.com/reel/DfRxDnhifTs/",
@@ -144,7 +143,7 @@ export const trabajos: Trabajo[] = [
     descripcion:
       "Venta, logística e instalación de una caldera de alta potencia PEISA XP 100 combinada con un intercambiador de calor Bowman: un solo sistema para la calefacción central y la climatización de la piscina del apart hotel.",
     fotos: [
-      { src: "entrega-caldera-peisa-xp-100-apart-hotel", alt: "Entrega de una caldera PEISA XP 100 embalada para un apart hotel" },
+      { src: "entrega-caldera-peisa-xp-100-apart-hotel", alt: "Caldera PEISA XP 100 en su caja, lista para la entrega" },
       { src: "intercambiador-bowman-fc100-piscina-apart-hotel", alt: "Intercambiador de calor Bowman FC100 instalado para climatizar la piscina" },
     ],
     instagram: "https://www.instagram.com/reel/CiK2m3jgd3c/",
