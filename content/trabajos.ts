@@ -100,9 +100,9 @@ export const trabajos: Trabajo[] = [
     descripcion:
       "Venta, instalación y puesta en marcha de una caldera mural PEISA Prima Tec 24 DSF, de doble servicio y tiro forzado: calefacción y agua caliente sanitaria en un solo equipo.",
     fotos: [
+      { src: "camioneta-gesetec-service-oficial-villa-gesell", alt: "Caldera PEISA en su caja, en la camioneta de Gesetec, lista para instalar" },
       { src: "caldera-peisa-prima-tec-24-dsf-nueva", alt: "Caldera PEISA Prima Tec 24 DSF recién instalada, con el cartel de garantía" },
       { src: "caldera-peisa-prima-tec-24-dsf-instalada", alt: "Caldera PEISA Prima Tec 24 DSF instalada con su panel digital" },
-      { src: "camioneta-gesetec-service-oficial-villa-gesell", alt: "Caldera PEISA en su caja, en la camioneta de Gesetec, lista para instalar" },
     ],
     instagram: "https://www.instagram.com/reel/DT-b7DCArTD/",
     peisa: true,

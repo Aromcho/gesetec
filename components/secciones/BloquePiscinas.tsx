@@ -89,8 +89,8 @@ export function BloquePiscinas({ fondo = "piscina-climatizada-costa-esmeralda" }
 
         <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-[1.4fr_1fr]">
           <figure className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/15 md:aspect-auto md:min-h-[18rem]">
-            <Foto nombre="piscina-climatizada-la-frontera-pinamar" alt="Pileta climatizada por Gesetec en La Frontera, Pinamar" sizes="(min-width: 768px) 55vw, 50vw" />
-            <figcaption className="etiqueta absolute bottom-3 left-3 rounded-full bg-noche/70 px-2.5 py-1 text-celeste backdrop-blur">La Frontera, Pinamar</figcaption>
+            <Foto nombre="piscina-climatizada-la-herradura-entre-pinos" alt="Pileta climatizada por Gesetec entre pinos en La Herradura, Pinamar" sizes="(min-width: 768px) 55vw, 50vw" />
+            <figcaption className="etiqueta absolute bottom-3 left-3 rounded-full bg-noche/70 px-2.5 py-1 text-celeste backdrop-blur">La Herradura, Pinamar</figcaption>
           </figure>
           <figure className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-white/15 md:aspect-auto">
             <Foto nombre="climatizador-piscina-tameco-cp-100-pileta" alt="Climatizador Tameco CP-100 instalado por Gesetec junto a la pileta" sizes="(min-width: 768px) 40vw, 50vw" />
