@@ -69,10 +69,10 @@ export const paginasZona: PaginaZona[] = [
   {
     slug: "villa-gesell",
     nombre: "Villa Gesell",
-    seoTitulo: "Service de calderas en Villa Gesell | Gesetec Calderas",
+    seoTitulo: "Servicio técnico y service de calderas en Villa Gesell",
     seoDescripcion:
       "Service oficial de calderas en Villa Gesell: reparación, mantenimiento, instalación y piscinas climatizadas. Local en Av. Buenos Aires 737.",
-    h1: "Service de calderas en Villa Gesell",
+    h1: "Servicio técnico de calderas en Villa Gesell",
     bajada: "Somos de acá: tenemos el local en la ciudad y desde ahí salimos todos los días.",
     parrafos: [
       "Gesetec es de Villa Gesell y acá tiene su local. Atendemos casas, departamentos, hoteles, complejos y comercios de toda la ciudad, del centro a los barrios del norte y del sur, todo el año y no solo en temporada.",
@@ -104,10 +104,10 @@ export const paginasZona: PaginaZona[] = [
   {
     slug: "mar-de-las-pampas",
     nombre: "Mar de las Pampas",
-    seoTitulo: "Service de calderas en Mar de las Pampas | Gesetec",
+    seoTitulo: "Servicio técnico y service de calderas en Mar de las Pampas",
     seoDescripcion:
       "Service, reparación y puesta en marcha de calderas en Mar de las Pampas: casas, cabañas y complejos. Climatización de piscinas. Pedí tu service.",
-    h1: "Service de calderas en Mar de las Pampas",
+    h1: "Servicio técnico de calderas en Mar de las Pampas",
     bajada: "Casas, cabañas y complejos entre el bosque: calefacción que tiene que andar cuando llegan los huéspedes.",
     parrafos: [
       "Mar de las Pampas queda muy cerca de nuestro local en Villa Gesell y es una de las zonas donde más trabajamos. Entre el bosque y las calles de arena hay casas, cabañas, complejos y apart hoteles que se alquilan por temporada.",
@@ -138,10 +138,10 @@ export const paginasZona: PaginaZona[] = [
   {
     slug: "mar-azul-y-las-gaviotas",
     nombre: "Mar Azul y Las Gaviotas",
-    seoTitulo: "Calderas en Mar Azul y Las Gaviotas | Gesetec Calderas",
+    seoTitulo: "Servicio técnico de calderas en Mar Azul y Las Gaviotas",
     seoDescripcion:
       "Service, reparación e instalación de calderas en Mar Azul y Las Gaviotas. Puesta en marcha de casas de temporada y climatización de piscinas.",
-    h1: "Service de calderas en Mar Azul y Las Gaviotas",
+    h1: "Servicio técnico de calderas en Mar Azul y Las Gaviotas",
     bajada: "Llegamos desde Villa Gesell a las casas del bosque más tranquilo de la costa.",
     parrafos: [
       "Mar Azul y Las Gaviotas, al sur de Mar de las Pampas, son pueblos de bosque y casas de veraneo. Buena parte de las viviendas se usan en temporada y pasan el resto del año cerradas, así que la caldera suele estar meses sin encenderse.",
@@ -172,10 +172,10 @@ export const paginasZona: PaginaZona[] = [
   {
     slug: "carilo",
     nombre: "Cariló",
-    seoTitulo: "Service de calderas en Cariló | Gesetec Calderas",
+    seoTitulo: "Servicio técnico y service de calderas en Cariló",
     seoDescripcion:
       "Service oficial de calderas en Cariló: casas, apart hoteles y complejos. Calefacción central, piscinas climatizadas y reparación con repuestos originales.",
-    h1: "Service de calderas en Cariló",
+    h1: "Servicio técnico de calderas en Cariló",
     bajada: "Casas grandes en el bosque, apart hoteles y piscinas: instalaciones que necesitan un service a la altura.",
     parrafos: [
       "En Cariló trabajamos con casas particulares, apart hoteles y complejos. Son instalaciones grandes, muchas veces con calefacción central por radiadores o losa radiante, agua caliente para varios baños y piscina climatizada.",
@@ -206,10 +206,10 @@ export const paginasZona: PaginaZona[] = [
   {
     slug: "valeria-del-mar",
     nombre: "Valeria del Mar",
-    seoTitulo: "Service de calderas en Valeria del Mar | Gesetec",
+    seoTitulo: "Servicio técnico de calderas en Valeria del Mar | Gesetec",
     seoDescripcion:
       "Service técnico de calderas en Valeria del Mar: reparación, mantenimiento anual, puesta en marcha e instalación. Service oficial PEISA y más marcas.",
-    h1: "Service técnico de calderas en Valeria del Mar",
+    h1: "Servicio técnico de calderas en Valeria del Mar",
     bajada: "Entre Pinamar y Cariló, casas de familia que necesitan la calefacción lista cuando llegan.",
     parrafos: [
       "Valeria del Mar, entre Pinamar y Cariló, es una localidad de casas: muchas de uso familiar en vacaciones y fines de semana largos, y otras de quienes viven todo el año en la costa.",
@@ -235,10 +235,10 @@ export const paginasZona: PaginaZona[] = [
   {
     slug: "pinamar",
     nombre: "Pinamar",
-    seoTitulo: "Service de calderas en Pinamar | Gesetec Calderas",
+    seoTitulo: "Servicio técnico y service de calderas en Pinamar",
     seoDescripcion:
       "Service oficial de calderas en Pinamar y La Herradura: reparación, mantenimiento, instalación y climatización de piscinas. Pedí tu service por WhatsApp.",
-    h1: "Service de calderas en Pinamar",
+    h1: "Servicio técnico de calderas en Pinamar",
     bajada: "De los departamentos del centro a las casas de los barrios cerrados de la zona norte.",
     parrafos: [
       "En Pinamar atendemos departamentos, casas, hoteles y comercios, y también los barrios cerrados de la zona norte, como La Herradura. Cada uno tiene su tipo de instalación: calderas murales en departamentos, sistemas de calefacción central en casas grandes, equipos de alta potencia en hoteles.",
@@ -268,7 +268,7 @@ export const paginasZona: PaginaZona[] = [
   {
     slug: "costa-esmeralda",
     nombre: "Costa Esmeralda",
-    seoTitulo: "Calderas y piscinas en Costa Esmeralda | Gesetec",
+    seoTitulo: "Servicio técnico de calderas y piscinas en Costa Esmeralda",
     seoDescripcion:
       "Service de calderas, puesta en marcha y climatización de piscinas en el barrio Costa Esmeralda. Service oficial PEISA y Tameco. Pedí tu service.",
     h1: "Calderas y piscinas climatizadas en Costa Esmeralda",
@@ -348,10 +348,10 @@ export const paginasZona: PaginaZona[] = [
   {
     slug: "general-madariaga",
     nombre: "General Madariaga",
-    seoTitulo: "Service de calderas en General Madariaga | Gesetec",
+    seoTitulo: "Servicio técnico de calderas en General Madariaga | Gesetec",
     seoDescripcion:
       "Service técnico de calderas en General Madariaga: reparación, mantenimiento anual e instalación de calderas y calefacción central. Pedí tu service.",
-    h1: "Service técnico de calderas en General Madariaga",
+    h1: "Servicio técnico de calderas en General Madariaga",
     bajada: "Viajamos desde Villa Gesell para el service, la reparación y la instalación de tu calefacción.",
     parrafos: [
       "General Madariaga es una ciudad de casas de uso permanente: la calefacción trabaja todo el invierno, día tras día. Por eso lo más importante es el mantenimiento anual, que ayuda a que la caldera rinda, consuma lo justo y no falle en pleno frío.",
